@@ -1,0 +1,91 @@
+{
+  "generatedAt": "2026-10-22T13:39:49.439Z",
+  "latest": "2026-10-21",
+  "dates": [
+    "2026-10-17",
+    "2026-10-18",
+    "2026-10-19",
+    "2026-10-20",
+    "2026-10-21"
+  ],
+  "filters": {
+    "languages": [
+      "Python",
+      "TypeScript",
+      "JavaScript",
+      "Go",
+      "Rust",
+      "Java",
+      "C++"
+    ],
+    "topics": [
+      {
+        "id": "ai",
+        "label": "AI"
+      },
+      {
+        "id": "llm",
+        "label": "LLM"
+      },
+      {
+        "id": "saas",
+        "label": "SaaS"
+      },
+      {
+        "id": "games",
+        "label": "游戏"
+      },
+      {
+        "id": "web3",
+        "label": "Web3"
+      }
+    ]
+  },
+  "entries": [
+    {
+      "date": "2026-10-17",
+      "source": "sample",
+      "mode": "first-run",
+      "previousDate": null,
+      "llm": "heuristic",
+      "email": "skipped",
+      "itemCount": 25
+    },
+    {
+      "date": "2026-10-18",
+      "source": "sample",
+      "mode": "delta",
+      "previousDate": "2026-10-17",
+      "llm": "heuristic",
+      "email": "skipped",
+      "itemCount": 25
+    },
+    {
+      "date": "2026-10-19",
+      "source": "sample",
+      "mode": "delta",
+      "previousDate": "2026-10-18",
+      "llm": "heuristic",
+      "email": "skipped",
+      "itemCount": 25
+    },
+    {
+      "date": "2026-10-20",
+      "source": "sample",
+      "mode": "delta",
+      "previousDate": "2026-10-19",
+      "llm": "heuristic",
+      "email": "skipped",
+      "itemCount": 25
+    },
+    {
+      "date": "2026-10-21",
+      "source": "sample",
+      "mode": "delta",
+      "previousDate": "2026-10-20",
+      "llm": "heuristic",
+      "email": "skipped",
+      "itemCount": 25
+    }
+  ]
+}

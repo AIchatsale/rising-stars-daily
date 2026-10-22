@@ -1,0 +1,69 @@
+{
+  "topN": 25,
+  "minStars": 40,
+  "newRepoWindowHours": 48,
+  "maxCandidates": 160,
+  "searchPerPage": 30,
+  "searchPages": 1,
+  "maxSearchQueries": 9,
+  "languageQueryLimit": 1,
+  "keywordQueryLimit": 1,
+  "hydrationCapWithoutToken": 25,
+  "hydrationCapWithToken": 240,
+  "languages": ["Python", "TypeScript", "JavaScript", "Go", "Rust", "Java", "C++"],
+  "keywords": ["agent", "self-hosted"],
+  "excludeNamePatterns": ["awesome-", "interview-questions", "roadmap"],
+  "topics": [
+    {
+      "id": "ai",
+      "label": "AI",
+      "githubTopics": ["artificial-intelligence", "machine-learning", "deep-learning", "stable-diffusion", "ai"],
+      "keywords": ["machine learning", "neural network", "diffusion"],
+      "minStars": 80
+    },
+    {
+      "id": "llm",
+      "label": "LLM",
+      "githubTopics": ["llm", "rag", "langchain"],
+      "keywords": ["llm", "rag", "agent"],
+      "minStars": 30
+    },
+    {
+      "id": "saas",
+      "label": "SaaS",
+      "githubTopics": ["saas", "crm"],
+      "keywords": ["saas", "subscription", "multi-tenant"],
+      "minStars": 20
+    },
+    {
+      "id": "games",
+      "label": "游戏",
+      "githubTopics": ["game-engine", "gamedev"],
+      "keywords": ["game engine", "gamedev"],
+      "minStars": 30
+    },
+    {
+      "id": "web3",
+      "label": "Web3",
+      "githubTopics": ["web3", "ethereum", "blockchain"],
+      "keywords": ["blockchain", "solidity", "defi"],
+      "minStars": 30
+    }
+  ],
+  "discover": {
+    "recentlyCreated": true,
+    "recentlyPushed": true,
+    "githubTrending": true
+  },
+  "llm": {
+    "model": "gpt-4o-mini",
+    "baseUrl": "https://api.openai.com/v1",
+    "maxRepos": 12,
+    "categories": ["应用", "工具", "库", "框架", "模板", "插件", "文档", "示例", "集成", "研究"]
+  },
+  "email": {
+    "subjectPrefix": "昇星日报",
+    "topInEmail": 10
+  },
+  "recommendCount": 3
+}

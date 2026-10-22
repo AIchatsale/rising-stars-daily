@@ -1,0 +1,501 @@
+{
+  "date": "2026-10-19",
+  "source": "sample",
+  "mode": "delta",
+  "phrase": "过去 24 小时",
+  "previousDate": "2026-10-18",
+  "recommended": [
+    {
+      "fullName": "open-webui/open-webui",
+      "reason": "星标增量为 1490（2.7%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 open-webui/open-webui 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "ai / llm",
+        "BSD-3-Clause"
+      ],
+      "category": "工具",
+      "url": "https://github.com/open-webui/open-webui",
+      "stars": 56110,
+      "delta": 1490,
+      "growthPercent": 2.727938484071769
+    },
+    {
+      "fullName": "langgenius/dify",
+      "reason": "星标增量为 560（0.8%）。涉及 ai、llm。若客户正在找可落地的应用，可以把 langgenius/dify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "ai / llm",
+        "Apache-2.0"
+      ],
+      "category": "应用",
+      "url": "https://github.com/langgenius/dify",
+      "stars": 72240,
+      "delta": 560,
+      "growthPercent": 0.78125
+    },
+    {
+      "fullName": "lobehub/lobe-chat",
+      "reason": "星标增量为 410（0.9%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 lobehub/lobe-chat 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "ai / llm",
+        "Apache-2.0"
+      ],
+      "category": "工具",
+      "url": "https://github.com/lobehub/lobe-chat",
+      "stars": 45770,
+      "delta": 410,
+      "growthPercent": 0.9038800705467371
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "fullName": "open-webui/open-webui",
+      "url": "https://github.com/open-webui/open-webui",
+      "description": "可自建的模型对话界面，能接本地模型和常见 API。",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 56110,
+      "delta": 1490,
+      "growthPercent": 2.727938484071769,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-10-08T00:00:00.000Z",
+      "category": "工具",
+      "summary": "open-webui：可自建的模型对话界面，能接本地模型和常见 API。",
+      "opportunity": "星标增量为 1490（2.7%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 open-webui/open-webui 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 2,
+      "fullName": "langgenius/dify",
+      "url": "https://github.com/langgenius/dify",
+      "description": "用可视化流程把检索、模型和工具串成可部署的 LLM 应用。",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 72240,
+      "delta": 560,
+      "growthPercent": 0.78125,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-05-15T00:00:00.000Z",
+      "category": "应用",
+      "summary": "dify：用可视化流程把检索、模型和工具串成可部署的 LLM 应用。",
+      "opportunity": "星标增量为 560（0.8%）。涉及 ai、llm。若客户正在找可落地的应用，可以把 langgenius/dify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 3,
+      "fullName": "lobehub/lobe-chat",
+      "url": "https://github.com/lobehub/lobe-chat",
+      "description": "面向多模型和智能体的聊天工作台。",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 45770,
+      "delta": 410,
+      "growthPercent": 0.9038800705467371,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-05-21T00:00:00.000Z",
+      "category": "工具",
+      "summary": "lobe-chat：面向多模型和智能体的聊天工作台。",
+      "opportunity": "星标增量为 410（0.9%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 lobehub/lobe-chat 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 4,
+      "fullName": "ollama/ollama",
+      "url": "https://github.com/ollama/ollama",
+      "description": "在自己的机器上拉取并运行大语言模型。",
+      "language": "Go",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 98810,
+      "delta": 390,
+      "growthPercent": 0.3962609225767121,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-06-26T00:00:00.000Z",
+      "category": "工具",
+      "summary": "ollama：在自己的机器上拉取并运行大语言模型。",
+      "opportunity": "星标增量为 390（0.4%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 ollama/ollama 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 5,
+      "fullName": "vllm-project/vllm",
+      "url": "https://github.com/vllm-project/vllm",
+      "description": "面向高并发的大模型推理服务引擎。",
+      "language": "Python",
+      "topics": [
+        "llm"
+      ],
+      "stars": 32790,
+      "delta": 380,
+      "growthPercent": 1.1724776303609998,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-02-12T00:00:00.000Z",
+      "category": "工具",
+      "summary": "vllm：面向高并发的大模型推理服务引擎。",
+      "opportunity": "星标增量为 380（1.2%）。涉及 llm。若客户正在找可落地的工具，可以把 vllm-project/vllm 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 6,
+      "fullName": "ggml-org/llama.cpp",
+      "url": "https://github.com/ggml-org/llama.cpp",
+      "description": "用 C/C++ 在消费级硬件上做 Llama 家族模型推理。",
+      "language": "C++",
+      "topics": [
+        "llm"
+      ],
+      "stars": 69590,
+      "delta": 310,
+      "growthPercent": 0.44745958429561206,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-03-10T00:00:00.000Z",
+      "category": "工具",
+      "summary": "llama.cpp：用 C/C++ 在消费级硬件上做 Llama 家族模型推理。",
+      "opportunity": "星标增量为 310（0.4%）。涉及 llm。若客户正在找可落地的工具，可以把 ggml-org/llama.cpp 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 7,
+      "fullName": "twentyhq/twenty",
+      "url": "https://github.com/twentyhq/twenty",
+      "description": "可自建的 CRM，适合想替换闭源客户系统的团队。",
+      "language": "TypeScript",
+      "topics": [
+        "saas"
+      ],
+      "stars": 18600,
+      "delta": 280,
+      "growthPercent": 1.5283842794759825,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-07-12T00:00:00.000Z",
+      "category": "应用",
+      "summary": "twenty：可自建的 CRM，适合想替换闭源客户系统的团队。",
+      "opportunity": "星标增量为 280（1.5%）。涉及 saas。若客户正在找可落地的应用，可以把 twentyhq/twenty 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 8,
+      "fullName": "comfyanonymous/ComfyUI",
+      "url": "https://github.com/comfyanonymous/ComfyUI",
+      "description": "节点式的扩散模型工作流，适合图像生产管线。",
+      "language": "Python",
+      "topics": [
+        "ai"
+      ],
+      "stars": 52580,
+      "delta": 280,
+      "growthPercent": 0.5353728489483747,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-01-17T00:00:00.000Z",
+      "category": "工具",
+      "summary": "ComfyUI：节点式的扩散模型工作流，适合图像生产管线。",
+      "opportunity": "星标增量为 280（0.5%）。涉及 ai。若客户正在找可落地的工具，可以把 comfyanonymous/ComfyUI 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 9,
+      "fullName": "BerriAI/litellm",
+      "url": "https://github.com/BerriAI/litellm",
+      "description": "把多家模型供应商收成一个统一的调用网关。",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 14500,
+      "delta": 260,
+      "growthPercent": 1.8258426966292134,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-08-01T00:00:00.000Z",
+      "category": "工具",
+      "summary": "litellm：把多家模型供应商收成一个统一的调用网关。",
+      "opportunity": "星标增量为 260（1.8%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 BerriAI/litellm 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 10,
+      "fullName": "astral-sh/uv",
+      "url": "https://github.com/astral-sh/uv",
+      "description": "很快的 Python 包管理器。",
+      "language": "Rust",
+      "topics": [],
+      "stars": 28480,
+      "delta": 260,
+      "growthPercent": 0.9213323883770376,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-10-01T00:00:00.000Z",
+      "category": "工具",
+      "summary": "uv：很快的 Python 包管理器。",
+      "opportunity": "星标增量为 260（0.9%）。若客户正在找可落地的工具，可以把 astral-sh/uv 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 11,
+      "fullName": "Mintplex-Labs/anything-llm",
+      "url": "https://github.com/Mintplex-Labs/anything-llm",
+      "description": "给团队用的私有文档问答，模型可以换成自建的。",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 22450,
+      "delta": 240,
+      "growthPercent": 1.0805943268797837,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-06-11T00:00:00.000Z",
+      "category": "工具",
+      "summary": "anything-llm：给团队用的私有文档问答，模型可以换成自建的。",
+      "opportunity": "星标增量为 240（1.1%）。涉及 llm。若客户正在找可落地的工具，可以把 Mintplex-Labs/anything-llm 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 12,
+      "fullName": "n8n-io/n8n",
+      "url": "https://github.com/n8n-io/n8n",
+      "description": "可自建的工作流自动化，能把内部系统和模型接在一起。",
+      "language": "TypeScript",
+      "topics": [
+        "ai"
+      ],
+      "stars": 48500,
+      "delta": 240,
+      "growthPercent": 0.49730625777041026,
+      "deltaSource": "snapshot",
+      "createdAt": "2019-06-22T00:00:00.000Z",
+      "category": "工具",
+      "summary": "n8n：可自建的工作流自动化，能把内部系统和模型接在一起。",
+      "opportunity": "星标增量为 240（0.5%）。涉及 ai。若客户正在找可落地的工具，可以把 n8n-io/n8n 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 13,
+      "fullName": "FlowiseAI/Flowise",
+      "url": "https://github.com/FlowiseAI/Flowise",
+      "description": "用节点画布编排 LLM 流程和工具调用。",
+      "language": "TypeScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 28390,
+      "delta": 210,
+      "growthPercent": 0.7452093683463449,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-04-02T00:00:00.000Z",
+      "category": "工具",
+      "summary": "Flowise：用节点画布编排 LLM 流程和工具调用。",
+      "opportunity": "星标增量为 210（0.7%）。涉及 llm。若客户正在找可落地的工具，可以把 FlowiseAI/Flowise 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 14,
+      "fullName": "nocodb/nocodb",
+      "url": "https://github.com/nocodb/nocodb",
+      "description": "在现有数据库上加一层表格界面，给业务同事用。",
+      "language": "TypeScript",
+      "topics": [
+        "saas"
+      ],
+      "stars": 46300,
+      "delta": 160,
+      "growthPercent": 0.3467706978760295,
+      "deltaSource": "snapshot",
+      "createdAt": "2021-02-01T00:00:00.000Z",
+      "category": "库",
+      "summary": "nocodb：在现有数据库上加一层表格界面，给业务同事用。",
+      "opportunity": "星标增量为 160（0.3%）。涉及 saas。若客户正在找可落地的库，可以把 nocodb/nocodb 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 15,
+      "fullName": "activepieces/activepieces",
+      "url": "https://github.com/activepieces/activepieces",
+      "description": "开源自动化流程，定位接近商业集成平台。",
+      "language": "TypeScript",
+      "topics": [
+        "saas"
+      ],
+      "stars": 9220,
+      "delta": 140,
+      "growthPercent": 1.5418502202643172,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-01-20T00:00:00.000Z",
+      "category": "集成",
+      "summary": "activepieces：开源自动化流程，定位接近商业集成平台。",
+      "opportunity": "星标增量为 140（1.5%）。涉及 saas。若客户正在找可落地的集成，可以把 activepieces/activepieces 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 16,
+      "fullName": "godotengine/godot",
+      "url": "https://github.com/godotengine/godot",
+      "description": "跨平台游戏引擎，2D 和 3D 都能直接做。",
+      "language": "C++",
+      "topics": [
+        "games"
+      ],
+      "stars": 90240,
+      "delta": 130,
+      "growthPercent": 0.14426811674619908,
+      "deltaSource": "snapshot",
+      "createdAt": "2014-02-10T00:00:00.000Z",
+      "category": "应用",
+      "summary": "godot：跨平台游戏引擎，2D 和 3D 都能直接做。",
+      "opportunity": "星标增量为 130（0.1%）。涉及 games。若客户正在找可落地的应用，可以把 godotengine/godot 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 17,
+      "fullName": "calcom/cal.com",
+      "url": "https://github.com/calcom/cal.com",
+      "description": "可自建的日程调度，能嵌进自己的产品。",
+      "language": "TypeScript",
+      "topics": [
+        "saas"
+      ],
+      "stars": 31210,
+      "delta": 120,
+      "growthPercent": 0.3859761981344484,
+      "deltaSource": "snapshot",
+      "createdAt": "2021-03-15T00:00:00.000Z",
+      "category": "工具",
+      "summary": "cal.com：可自建的日程调度，能嵌进自己的产品。",
+      "opportunity": "星标增量为 120（0.4%）。涉及 saas。若客户正在找可落地的工具，可以把 calcom/cal.com 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 18,
+      "fullName": "bevyengine/bevy",
+      "url": "https://github.com/bevyengine/bevy",
+      "description": "数据驱动的 Rust 游戏引擎。",
+      "language": "Rust",
+      "topics": [
+        "games"
+      ],
+      "stars": 35200,
+      "delta": 120,
+      "growthPercent": 0.34207525655644244,
+      "deltaSource": "snapshot",
+      "createdAt": "2020-08-11T00:00:00.000Z",
+      "category": "工具",
+      "summary": "bevy：数据驱动的 Rust 游戏引擎。",
+      "opportunity": "星标增量为 120（0.3%）。涉及 games。若客户正在找可落地的工具，可以把 bevyengine/bevy 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 19,
+      "fullName": "huggingface/transformers",
+      "url": "https://github.com/huggingface/transformers",
+      "description": "覆盖大量预训练模型的训练和推理库。",
+      "language": "Python",
+      "topics": [
+        "ai"
+      ],
+      "stars": 130200,
+      "delta": 110,
+      "growthPercent": 0.08455684526097317,
+      "deltaSource": "snapshot",
+      "createdAt": "2018-11-01T00:00:00.000Z",
+      "category": "库",
+      "summary": "transformers：覆盖大量预训练模型的训练和推理库。",
+      "opportunity": "星标增量为 110（0.1%）。涉及 ai。若客户正在找可落地的库，可以把 huggingface/transformers 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 20,
+      "fullName": "umami-software/umami",
+      "url": "https://github.com/umami-software/umami",
+      "description": "注重隐私的网站分析，可替代第三方统计脚本。",
+      "language": "TypeScript",
+      "topics": [
+        "saas"
+      ],
+      "stars": 21160,
+      "delta": 90,
+      "growthPercent": 0.42714760322733747,
+      "deltaSource": "snapshot",
+      "createdAt": "2020-08-01T00:00:00.000Z",
+      "category": "工具",
+      "summary": "umami：注重隐私的网站分析，可替代第三方统计脚本。",
+      "opportunity": "星标增量为 90（0.4%）。涉及 saas。若客户正在找可落地的工具，可以把 umami-software/umami 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 21,
+      "fullName": "rustdesk/rustdesk",
+      "url": "https://github.com/rustdesk/rustdesk",
+      "description": "可自建的远程桌面。",
+      "language": "Rust",
+      "topics": [],
+      "stars": 72170,
+      "delta": 90,
+      "growthPercent": 0.12486126526082132,
+      "deltaSource": "snapshot",
+      "createdAt": "2020-09-01T00:00:00.000Z",
+      "category": "工具",
+      "summary": "rustdesk：可自建的远程桌面。",
+      "opportunity": "星标增量为 90（0.1%）。若客户正在找可落地的工具，可以把 rustdesk/rustdesk 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 22,
+      "fullName": "payloadcms/payload",
+      "url": "https://github.com/payloadcms/payload",
+      "description": "用 TypeScript 写的无头 CMS，方便嵌进现有后台。",
+      "language": "TypeScript",
+      "topics": [
+        "saas"
+      ],
+      "stars": 23140,
+      "delta": 80,
+      "growthPercent": 0.3469210754553339,
+      "deltaSource": "snapshot",
+      "createdAt": "2021-01-18T00:00:00.000Z",
+      "category": "工具",
+      "summary": "payload：用 TypeScript 写的无头 CMS，方便嵌进现有后台。",
+      "opportunity": "星标增量为 80（0.3%）。涉及 saas。若客户正在找可落地的工具，可以把 payloadcms/payload 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 23,
+      "fullName": "4ian/GDevelop",
+      "url": "https://github.com/4ian/GDevelop",
+      "description": "可视化游戏制作工具，策划也能参与原型。",
+      "language": "JavaScript",
+      "topics": [
+        "games"
+      ],
+      "stars": 8110,
+      "delta": 70,
+      "growthPercent": 0.8706467661691543,
+      "deltaSource": "snapshot",
+      "createdAt": "2014-06-01T00:00:00.000Z",
+      "category": "工具",
+      "summary": "GDevelop：可视化游戏制作工具，策划也能参与原型。",
+      "opportunity": "星标增量为 70（0.9%）。涉及 games。若客户正在找可落地的工具，可以把 4ian/GDevelop 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 24,
+      "fullName": "wevm/viem",
+      "url": "https://github.com/wevm/viem",
+      "description": "类型友好的以太坊接口库。",
+      "language": "TypeScript",
+      "topics": [
+        "web3"
+      ],
+      "stars": 2670,
+      "delta": 40,
+      "growthPercent": 1.520912547528517,
+      "deltaSource": "snapshot",
+      "createdAt": "2022-10-03T00:00:00.000Z",
+      "category": "库",
+      "summary": "viem：类型友好的以太坊接口库。",
+      "opportunity": "星标增量为 40（1.5%）。涉及 web3。若客户正在找可落地的库，可以把 wevm/viem 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 25,
+      "fullName": "foundry-rs/foundry",
+      "url": "https://github.com/foundry-rs/foundry",
+      "description": "Solidity 的开发、测试和部署工具链。",
+      "language": "Rust",
+      "topics": [
+        "web3"
+      ],
+      "stars": 8255,
+      "delta": 30,
+      "growthPercent": 0.364741641337386,
+      "deltaSource": "snapshot",
+      "createdAt": "2021-12-01T00:00:00.000Z",
+      "category": "工具",
+      "summary": "foundry：Solidity 的开发、测试和部署工具链。",
+      "opportunity": "星标增量为 30（0.4%）。涉及 web3。若客户正在找可落地的工具，可以把 foundry-rs/foundry 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    }
+  ]
+}
