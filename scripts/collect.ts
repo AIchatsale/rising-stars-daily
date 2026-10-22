@@ -67,8 +67,18 @@ async function main(): Promise<void> {
 
   const trendingNames = new Set(trendingHits.map((hit) => hit.fullName));
   const previousNames = new Set(previous?.repos.map((repo) => repo.fullName) ?? []);
+  const recentCutoff = Date.now() - config.newRepoWindowHours * 3_600_000;
+  const isRecent = (repo: RepoSnapshot) => {
+    const created = new Date(repo.createdAt).getTime();
+    return Number.isFinite(created) && created >= recentCutoff;
+  };
   const all = [...byName.values()];
-  const pinned = all.filter((repo) => trendingNames.has(repo.fullName) || previousNames.has(repo.fullName));
+  const pinned = all.filter(
+    (repo) => trendingNames.has(repo.fullName) || previousNames.has(repo.fullName) || isRecent(repo),
+  );
+  console.log(
+    `Keeping ${pinned.length} pinned repositories (${all.filter(isRecent).length} created within ${config.newRepoWindowHours}h)`,
+  );
   const room = Math.max(0, config.maxCandidates - pinned.length);
   const others = all
     .filter((repo) => !trendingNames.has(repo.fullName) && !previousNames.has(repo.fullName))

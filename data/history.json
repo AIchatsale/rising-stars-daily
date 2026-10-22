@@ -627,5 +627,156 @@
       }
     ]
   },
-  "live": {}
+  "live": {
+    "cloudflare/security-audit-skill": [
+      {
+        "date": "2026-10-22",
+        "stars": 38301
+      }
+    ],
+    "DietrichGebert/ponytail": [
+      {
+        "date": "2026-10-22",
+        "stars": 172741
+      }
+    ],
+    "Graphify-Labs/graphify": [
+      {
+        "date": "2026-10-22",
+        "stars": 132400
+      }
+    ],
+    "ikow/php2shell-poc": [
+      {
+        "date": "2026-10-22",
+        "stars": 1383
+      }
+    ],
+    "9bie/php2shell-bypass-aslr-exp": [
+      {
+        "date": "2026-10-22",
+        "stars": 853
+      }
+    ],
+    "eagle-hq/EAGLE-4": [
+      {
+        "date": "2026-10-22",
+        "stars": 810
+      }
+    ],
+    "eness/php2shell-CVE-2026-109618-CVE-2026-109619-PoC": [
+      {
+        "date": "2026-10-22",
+        "stars": 806
+      }
+    ],
+    "openai/php2shell-checker": [
+      {
+        "date": "2026-10-22",
+        "stars": 703
+      }
+    ],
+    "supabase/supabase": [
+      {
+        "date": "2026-10-22",
+        "stars": 113303
+      }
+    ],
+    "NVIDIA/flare-local-inference": [
+      {
+        "date": "2026-10-22",
+        "stars": 585
+      }
+    ],
+    "luongnv89/claude-howto": [
+      {
+        "date": "2026-10-22",
+        "stars": 42700
+      }
+    ],
+    "colinhacks/reylo": [
+      {
+        "date": "2026-10-22",
+        "stars": 398
+      }
+    ],
+    "WoYun520/dsh-purge": [
+      {
+        "date": "2026-10-22",
+        "stars": 386
+      }
+    ],
+    "Acelogic/Snapintosh": [
+      {
+        "date": "2026-10-22",
+        "stars": 367
+      }
+    ],
+    "Jakeschincariol/day-trader-skill": [
+      {
+        "date": "2026-10-22",
+        "stars": 355
+      }
+    ],
+    "anthropics/knowledge-work-plugins": [
+      {
+        "date": "2026-10-22",
+        "stars": 31338
+      }
+    ],
+    "Alejandros17487/ai-jailbreaks": [
+      {
+        "date": "2026-10-22",
+        "stars": 281
+      }
+    ],
+    "torrentplayer/torrentplayer": [
+      {
+        "date": "2026-10-22",
+        "stars": 273
+      }
+    ],
+    "rbl-tools/.github": [
+      {
+        "date": "2026-10-22",
+        "stars": 241
+      }
+    ],
+    "helloianneo/ian-xhs-carousel": [
+      {
+        "date": "2026-10-22",
+        "stars": 213
+      }
+    ],
+    "atbfun/ATBGamePort": [
+      {
+        "date": "2026-10-22",
+        "stars": 212
+      }
+    ],
+    "Fluepke/emudrahahahahaha": [
+      {
+        "date": "2026-10-22",
+        "stars": 202
+      }
+    ],
+    "tombkeeper/BitKindle": [
+      {
+        "date": "2026-10-22",
+        "stars": 196
+      }
+    ],
+    "zita-ch/supermimic_vibed": [
+      {
+        "date": "2026-10-22",
+        "stars": 196
+      }
+    ],
+    "oosexgang/hackios-xnu-kernel": [
+      {
+        "date": "2026-10-22",
+        "stars": 194
+      }
+    ]
+  }
 }
