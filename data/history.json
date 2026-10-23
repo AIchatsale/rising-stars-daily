@@ -635,7 +635,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 39564
+        "stars": 39610
       }
     ],
     "DietrichGebert/ponytail": [
@@ -645,7 +645,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 173458
+        "stars": 173514
       }
     ],
     "Graphify-Labs/graphify": [
@@ -655,7 +655,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 132937
+        "stars": 132977
       }
     ],
     "ikow/php2shell-poc": [
@@ -665,7 +665,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 1521
+        "stars": 1528
       }
     ],
     "9bie/php2shell-bypass-aslr-exp": [
@@ -675,7 +675,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 956
+        "stars": 958
       }
     ],
     "eagle-hq/EAGLE-4": [
@@ -685,7 +685,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 869
+        "stars": 872
       }
     ],
     "eness/php2shell-CVE-2026-109618-CVE-2026-109619-PoC": [
@@ -695,7 +695,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 887
+        "stars": 891
       }
     ],
     "openai/php2shell-checker": [
@@ -705,7 +705,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 816
+        "stars": 824
       }
     ],
     "supabase/supabase": [
@@ -715,7 +715,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 113481
+        "stars": 113494
       }
     ],
     "NVIDIA/flare-local-inference": [
@@ -725,7 +725,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 607
+        "stars": 608
       }
     ],
     "luongnv89/claude-howto": [
@@ -735,7 +735,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 43197
+        "stars": 43236
       }
     ],
     "colinhacks/reylo": [
@@ -745,7 +745,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 665
+        "stars": 673
       }
     ],
     "WoYun520/dsh-purge": [
@@ -755,7 +755,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 401
+        "stars": 403
       }
     ],
     "Acelogic/Snapintosh": [
@@ -765,7 +765,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 558
+        "stars": 562
       }
     ],
     "Jakeschincariol/day-trader-skill": [
@@ -775,7 +775,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 514
+        "stars": 519
       }
     ],
     "anthropics/knowledge-work-plugins": [
@@ -785,7 +785,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 31587
+        "stars": 31623
       }
     ],
     "Alejandros17487/ai-jailbreaks": [
@@ -805,7 +805,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 355
+        "stars": 357
       }
     ],
     "rbl-tools/.github": [
@@ -825,7 +825,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 224
+        "stars": 225
       }
     ],
     "atbfun/ATBGamePort": [
@@ -835,7 +835,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 229
+        "stars": 231
       }
     ],
     "Fluepke/emudrahahahahaha": [
@@ -845,7 +845,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 217
+        "stars": 218
       }
     ],
     "tombkeeper/BitKindle": [
@@ -865,7 +865,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 254
+        "stars": 258
       }
     ],
     "oosexgang/hackios-xnu-kernel": [
@@ -875,7 +875,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 501
+        "stars": 519
       }
     ],
     "morluto/rea": [
@@ -885,13 +885,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 366245
-      }
-    ],
-    "wesbos/3d-model-anything": [
-      {
-        "date": "2026-10-23",
-        "stars": 483
+        "stars": 366397
       }
     ],
     "stablyai/orca": [
@@ -901,17 +895,13 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 102754
+        "stars": 102793
       }
     ],
-    "affaan-m/ECC": [
-      {
-        "date": "2026-10-22",
-        "stars": 286147
-      },
+    "wesbos/3d-model-anything": [
       {
         "date": "2026-10-23",
-        "stars": 286538
+        "stars": 496
       }
     ],
     "mattpocock/skills": [
@@ -921,13 +911,17 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 300890
+        "stars": 300906
       }
     ],
-    "david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026": [
+    "affaan-m/ECC": [
+      {
+        "date": "2026-10-22",
+        "stars": 286147
+      },
       {
         "date": "2026-10-23",
-        "stars": 300
+        "stars": 286550
       }
     ],
     "php/php-src": [
@@ -937,19 +931,19 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 41151
+        "stars": 41167
+      }
+    ],
+    "david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026": [
+      {
+        "date": "2026-10-23",
+        "stars": 301
       }
     ],
     "assetnote/php2shell-scanner": [
       {
         "date": "2026-10-23",
-        "stars": 290
-      }
-    ],
-    "rossark0/rossark-motion-skill": [
-      {
-        "date": "2026-10-23",
-        "stars": 278
+        "stars": 297
       }
     ],
     "fastapi/fastapi": [
@@ -959,7 +953,13 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 103739
+        "stars": 103760
+      }
+    ],
+    "rossark0/rossark-motion-skill": [
+      {
+        "date": "2026-10-23",
+        "stars": 286
       }
     ],
     "obra/superpowers": [
@@ -969,13 +969,13 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 303743
+        "stars": 303756
       }
     ],
     "oosexgang/hackios-xnu-userland": [
       {
         "date": "2026-10-23",
-        "stars": 229
+        "stars": 240
       }
     ],
     "Leonxlnx/taste-skill": [
@@ -985,7 +985,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 101120
+        "stars": 101136
       }
     ],
     "nextlevelbuilder/ui-ux-pro-max-skill": [
@@ -995,7 +995,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 139018
+        "stars": 139029
       }
     ],
     "anomalyco/opencode": [
@@ -1005,17 +1005,7 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 220212
-      }
-    ],
-    "harry0703/MoneyPrinterTurbo": [
-      {
-        "date": "2026-10-22",
-        "stars": 134041
-      },
-      {
-        "date": "2026-10-23",
-        "stars": 134243
+        "stars": 220222
       }
     ],
     "tt-a1i/archify": [
@@ -1025,7 +1015,17 @@
       },
       {
         "date": "2026-10-23",
-        "stars": 87609
+        "stars": 87636
+      }
+    ],
+    "harry0703/MoneyPrinterTurbo": [
+      {
+        "date": "2026-10-22",
+        "stars": 134041
+      },
+      {
+        "date": "2026-10-23",
+        "stars": 134257
       }
     ]
   }

@@ -7,42 +7,42 @@
   "recommended": [
     {
       "fullName": "morluto/rea",
-      "reason": "星标增量为 3315（0.9%）。涉及 llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "reason": "星标增量为 3467（1.0%）。涉及 llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
       "signals": [
         "llm",
         "MIT"
       ],
       "category": "插件",
       "url": "https://github.com/morluto/rea",
-      "stars": 366245,
-      "delta": 3315,
-      "growthPercent": 0.9133992780977047
+      "stars": 366397,
+      "delta": 3467,
+      "growthPercent": 0.9552806326288816
     },
     {
       "fullName": "cloudflare/security-audit-skill",
-      "reason": "星标增量为 1263（3.3%）。涉及 llm。若客户正在找可落地的工具，可以把 cloudflare/security-audit-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "reason": "星标增量为 1309（3.4%）。涉及 llm。若客户正在找可落地的工具，可以把 cloudflare/security-audit-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
       "signals": [
         "llm",
         "MIT"
       ],
       "category": "工具",
       "url": "https://github.com/cloudflare/security-audit-skill",
-      "stars": 39564,
-      "delta": 1263,
-      "growthPercent": 3.297564032270698
+      "stars": 39610,
+      "delta": 1309,
+      "growthPercent": 3.417665335108744
     },
     {
       "fullName": "DietrichGebert/ponytail",
-      "reason": "星标增量为 717（0.4%）。涉及 llm。若客户正在找可落地的插件，可以把 DietrichGebert/ponytail 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "reason": "星标增量为 773（0.4%）。涉及 llm。若客户正在找可落地的插件，可以把 DietrichGebert/ponytail 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
       "signals": [
         "llm",
         "MIT"
       ],
       "category": "插件",
       "url": "https://github.com/DietrichGebert/ponytail",
-      "stars": 173458,
-      "delta": 717,
-      "growthPercent": 0.41507227583492046
+      "stars": 173514,
+      "delta": 773,
+      "growthPercent": 0.44749075205075806
     }
   ],
   "items": [
@@ -55,14 +55,14 @@
       "topics": [
         "llm"
       ],
-      "stars": 366245,
-      "delta": 3315,
-      "growthPercent": 0.9133992780977047,
+      "stars": 366397,
+      "delta": 3467,
+      "growthPercent": 0.9552806326288816,
       "deltaSource": "snapshot",
       "createdAt": "2026-04-14T00:51:32Z",
       "category": "插件",
       "summary": "rea：Reverse engineer anything with agents, from app behavior down to native binaries.",
-      "opportunity": "星标增量为 3315（0.9%）。涉及 llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 3467（1.0%）。涉及 llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 2,
@@ -73,14 +73,14 @@
       "topics": [
         "llm"
       ],
-      "stars": 39564,
-      "delta": 1263,
-      "growthPercent": 3.297564032270698,
+      "stars": 39610,
+      "delta": 1309,
+      "growthPercent": 3.417665335108744,
       "deltaSource": "snapshot",
       "createdAt": "2026-06-18T14:08:44Z",
       "category": "工具",
       "summary": "security-audit-skill：A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-      "opportunity": "星标增量为 1263（3.3%）。涉及 llm。若客户正在找可落地的工具，可以把 cloudflare/security-audit-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 1309（3.4%）。涉及 llm。若客户正在找可落地的工具，可以把 cloudflare/security-audit-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 3,
@@ -91,14 +91,14 @@
       "topics": [
         "llm"
       ],
-      "stars": 173458,
-      "delta": 717,
-      "growthPercent": 0.41507227583492046,
+      "stars": 173514,
+      "delta": 773,
+      "growthPercent": 0.44749075205075806,
       "deltaSource": "snapshot",
       "createdAt": "2026-06-12T00:52:37Z",
       "category": "插件",
       "summary": "ponytail：Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
-      "opportunity": "星标增量为 717（0.4%）。涉及 llm。若客户正在找可落地的插件，可以把 DietrichGebert/ponytail 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 773（0.4%）。涉及 llm。若客户正在找可落地的插件，可以把 DietrichGebert/ponytail 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 4,
@@ -109,14 +109,14 @@
       "topics": [
         "llm"
       ],
-      "stars": 132937,
-      "delta": 537,
-      "growthPercent": 0.4055891238670695,
+      "stars": 132977,
+      "delta": 577,
+      "growthPercent": 0.4358006042296072,
       "deltaSource": "snapshot",
       "createdAt": "2026-04-03T15:49:07Z",
       "category": "文档",
       "summary": "graphify：Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local",
-      "opportunity": "星标增量为 537（0.4%）。涉及 llm。若客户正在找可落地的文档，可以把 Graphify-Labs/graphify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 577（0.4%）。涉及 llm。若客户正在找可落地的文档，可以把 Graphify-Labs/graphify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 5,
@@ -127,33 +127,17 @@
       "topics": [
         "llm"
       ],
-      "stars": 43197,
-      "delta": 497,
-      "growthPercent": 1.1639344262295082,
+      "stars": 43236,
+      "delta": 536,
+      "growthPercent": 1.2552693208430914,
       "deltaSource": "snapshot",
       "createdAt": "2025-11-07T22:59:34Z",
       "category": "文档",
       "summary": "claude-howto：A visual, example-driven guide to Claude Code — from basic concepts to advanced agents, with copy-paste templates that bring immediate value.",
-      "opportunity": "星标增量为 497（1.2%）。涉及 llm。若客户正在找可落地的文档，可以把 luongnv89/claude-howto 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 536（1.3%）。涉及 llm。若客户正在找可落地的文档，可以把 luongnv89/claude-howto 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 6,
-      "fullName": "wesbos/3d-model-anything",
-      "url": "https://github.com/wesbos/3d-model-anything",
-      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
-      "language": "Swift",
-      "topics": [],
-      "stars": 483,
-      "delta": 483,
-      "growthPercent": null,
-      "deltaSource": "created-window",
-      "createdAt": "2026-10-21T19:38:50Z",
-      "category": "工具",
-      "summary": "3d-model-anything：Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
-      "opportunity": "星标增量为 483。若客户正在找可落地的工具，可以把 wesbos/3d-model-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
-    },
-    {
-      "rank": 7,
       "fullName": "stablyai/orca",
       "url": "https://github.com/stablyai/orca",
       "description": "Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote runtime.",
@@ -162,35 +146,33 @@
         "llm",
         "saas"
       ],
-      "stars": 102754,
-      "delta": 462,
-      "growthPercent": 0.4516482227349157,
+      "stars": 102793,
+      "delta": 501,
+      "growthPercent": 0.4897743714073437,
       "deltaSource": "snapshot",
       "createdAt": "2026-03-17T03:28:57Z",
       "category": "应用",
       "summary": "orca：Orca is the place for working with a fleet of agents (e.g. Grok Bot, Claude Code). Run any coding agent with your own subscription. Available on desktop, mobile and remote run",
-      "opportunity": "星标增量为 462（0.5%）。涉及 llm、saas。若客户正在找可落地的应用，可以把 stablyai/orca 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 501（0.5%）。涉及 llm、saas。若客户正在找可落地的应用，可以把 stablyai/orca 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 7,
+      "fullName": "wesbos/3d-model-anything",
+      "url": "https://github.com/wesbos/3d-model-anything",
+      "description": "Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "language": "Swift",
+      "topics": [],
+      "stars": 496,
+      "delta": 496,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-10-21T19:38:50Z",
+      "category": "工具",
+      "summary": "3d-model-anything：Capture iPhone LiDAR and photos, reconstruct editable Three.js rooms, and explore them in a browser.",
+      "opportunity": "星标增量为 496。若客户正在找可落地的工具，可以把 wesbos/3d-model-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 8,
-      "fullName": "affaan-m/ECC",
-      "url": "https://github.com/affaan-m/ECC",
-      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "language": "JavaScript",
-      "topics": [
-        "llm"
-      ],
-      "stars": 286538,
-      "delta": 391,
-      "growthPercent": 0.13664305409457378,
-      "deltaSource": "snapshot",
-      "createdAt": "2026-01-18T00:51:51Z",
-      "category": "研究",
-      "summary": "ECC：The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
-      "opportunity": "星标增量为 391（0.1%）。涉及 llm。若客户正在找可落地的研究，可以把 affaan-m/ECC 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
-    },
-    {
-      "rank": 9,
       "fullName": "mattpocock/skills",
       "url": "https://github.com/mattpocock/skills",
       "description": "Skills for Real Engineers. Straight from my .agents directory.",
@@ -198,14 +180,32 @@
       "topics": [
         "llm"
       ],
-      "stars": 300890,
-      "delta": 389,
-      "growthPercent": 0.12945048435778914,
+      "stars": 300906,
+      "delta": 405,
+      "growthPercent": 0.13477492587379078,
       "deltaSource": "snapshot",
       "createdAt": "2026-02-03T11:15:53Z",
       "category": "工具",
       "summary": "skills：Skills for Real Engineers. Straight from my .agents directory.",
-      "opportunity": "星标增量为 389（0.1%）。涉及 llm。若客户正在找可落地的工具，可以把 mattpocock/skills 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 405（0.1%）。涉及 llm。若客户正在找可落地的工具，可以把 mattpocock/skills 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 9,
+      "fullName": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 286550,
+      "delta": 403,
+      "growthPercent": 0.14083670281358882,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-18T00:51:51Z",
+      "category": "研究",
+      "summary": "ECC：The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "opportunity": "星标增量为 403（0.1%）。涉及 llm。若客户正在找可落地的研究，可以把 affaan-m/ECC 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 10,
@@ -214,46 +214,46 @@
       "description": null,
       "language": "C",
       "topics": [],
-      "stars": 501,
-      "delta": 307,
-      "growthPercent": 158.24742268041237,
+      "stars": 519,
+      "delta": 325,
+      "growthPercent": 167.5257731958763,
       "deltaSource": "snapshot",
       "createdAt": "2026-10-22T06:20:11Z",
       "category": "工具",
       "summary": "oosexgang/hackios-xnu-kernel 没有简介。当前归类为工具。",
-      "opportunity": "星标增量为 307（158.2%）。若客户正在找可落地的工具，可以把 oosexgang/hackios-xnu-kernel 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 325（167.5%）。若客户正在找可落地的工具，可以把 oosexgang/hackios-xnu-kernel 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 11,
-      "fullName": "david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026",
-      "url": "https://github.com/david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026",
-      "description": "High-performance Roblox aimbot with adaptive smooth tracking and precise auto aim. Fully configurable, works with most executors, clean modular structure. Easy setup for current Roblox version.",
-      "language": "Python",
-      "topics": [],
-      "stars": 300,
-      "delta": 300,
-      "growthPercent": null,
-      "deltaSource": "created-window",
-      "createdAt": "2026-10-22T18:45:14Z",
-      "category": "工具",
-      "summary": "Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026：High-performance Roblox aimbot with adaptive smooth tracking and precise auto aim. Fully configurable, works with most executors,",
-      "opportunity": "星标增量为 300。若客户正在找可落地的工具，可以把 david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
-    },
-    {
-      "rank": 12,
       "fullName": "php/php-src",
       "url": "https://github.com/php/php-src",
       "description": "The PHP Interpreter",
       "language": "C",
       "topics": [],
-      "stars": 41151,
-      "delta": 298,
-      "growthPercent": 0.729444594032262,
+      "stars": 41167,
+      "delta": 314,
+      "growthPercent": 0.7686094044501016,
       "deltaSource": "snapshot",
       "createdAt": "2011-06-16T01:52:25Z",
       "category": "工具",
       "summary": "php-src：The PHP Interpreter",
-      "opportunity": "星标增量为 298（0.7%）。若客户正在找可落地的工具，可以把 php/php-src 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 314（0.8%）。若客户正在找可落地的工具，可以把 php/php-src 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 12,
+      "fullName": "david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026",
+      "url": "https://github.com/david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026",
+      "description": "High-performance Roblox aimbot with adaptive smooth tracking and precise auto aim. Fully configurable, works with most executors, clean modular structure. Easy setup for current Roblox version.",
+      "language": "Python",
+      "topics": [],
+      "stars": 301,
+      "delta": 301,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-10-22T18:45:14Z",
+      "category": "工具",
+      "summary": "Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026：High-performance Roblox aimbot with adaptive smooth tracking and precise auto aim. Fully configurable, works with most executors,",
+      "opportunity": "星标增量为 301。若客户正在找可落地的工具，可以把 david-silvalab1993i0/Roblox-Aimbot-Smooth-Tracking-Auto-Aim-Script-2026 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 13,
@@ -262,62 +262,62 @@
       "description": "High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
       "language": "Python",
       "topics": [],
-      "stars": 290,
-      "delta": 290,
+      "stars": 297,
+      "delta": 297,
       "growthPercent": null,
       "deltaSource": "created-window",
       "createdAt": "2026-10-22T03:53:20Z",
       "category": "工具",
       "summary": "php2shell-scanner：High fidelity scanner for php2shell (CVE-2026-109618 and CVE-2026-109619)",
-      "opportunity": "星标增量为 290。若客户正在找可落地的工具，可以把 assetnote/php2shell-scanner 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 297。若客户正在找可落地的工具，可以把 assetnote/php2shell-scanner 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 14,
-      "fullName": "rossark0/rossark-motion-skill",
-      "url": "https://github.com/rossark0/rossark-motion-skill",
-      "description": "Turn any SVG into a professional 60 fps animation. A Claude Code skill that brings anything drawn to life: live faces, full-body acting and whole scenes, in React Native and SwiftUI.",
-      "language": "Swift",
-      "topics": [],
-      "stars": 278,
-      "delta": 278,
-      "growthPercent": null,
-      "deltaSource": "created-window",
-      "createdAt": "2026-10-22T03:33:03Z",
-      "category": "工具",
-      "summary": "rossark-motion-skill：Turn any SVG into a professional 60 fps animation. A Claude Code skill that brings anything drawn to life: live faces, full-body acting and whole scenes, in Re",
-      "opportunity": "星标增量为 278。若客户正在找可落地的工具，可以把 rossark0/rossark-motion-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
-    },
-    {
-      "rank": 15,
-      "fullName": "colinhacks/reylo",
-      "url": "https://github.com/colinhacks/reylo",
-      "description": "Import .sql files into TypeScript with full type inference and zero codegen.",
-      "language": "Rust",
-      "topics": [],
-      "stars": 665,
-      "delta": 267,
-      "growthPercent": 67.08542713567839,
-      "deltaSource": "snapshot",
-      "createdAt": "2026-10-21T00:16:54Z",
-      "category": "工具",
-      "summary": "reylo：Import .sql files into TypeScript with full type inference and zero codegen.",
-      "opportunity": "星标增量为 267（67.1%）。若客户正在找可落地的工具，可以把 colinhacks/reylo 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
-    },
-    {
-      "rank": 16,
       "fullName": "fastapi/fastapi",
       "url": "https://github.com/fastapi/fastapi",
       "description": "FastAPI framework, high performance, easy to learn, fast to code, ready for production",
       "language": "Python",
       "topics": [],
-      "stars": 103739,
-      "delta": 266,
-      "growthPercent": 0.25707189315087026,
+      "stars": 103760,
+      "delta": 287,
+      "growthPercent": 0.2773670426101495,
       "deltaSource": "snapshot",
       "createdAt": "2018-12-08T08:21:47Z",
       "category": "框架",
       "summary": "fastapi：FastAPI framework, high performance, easy to learn, fast to code, ready for production",
-      "opportunity": "星标增量为 266（0.3%）。若客户正在找可落地的框架，可以把 fastapi/fastapi 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 287（0.3%）。若客户正在找可落地的框架，可以把 fastapi/fastapi 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 15,
+      "fullName": "rossark0/rossark-motion-skill",
+      "url": "https://github.com/rossark0/rossark-motion-skill",
+      "description": "Turn any SVG into a professional 60 fps animation. A Claude Code skill that brings anything drawn to life: live faces, full-body acting and whole scenes, in React Native and SwiftUI.",
+      "language": "Swift",
+      "topics": [],
+      "stars": 286,
+      "delta": 286,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-10-22T03:33:03Z",
+      "category": "工具",
+      "summary": "rossark-motion-skill：Turn any SVG into a professional 60 fps animation. A Claude Code skill that brings anything drawn to life: live faces, full-body acting and whole scenes, in Re",
+      "opportunity": "星标增量为 286。若客户正在找可落地的工具，可以把 rossark0/rossark-motion-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 16,
+      "fullName": "anthropics/knowledge-work-plugins",
+      "url": "https://github.com/anthropics/knowledge-work-plugins",
+      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "language": "Python",
+      "topics": [],
+      "stars": 31623,
+      "delta": 285,
+      "growthPercent": 0.9094390197204671,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-23T20:11:54Z",
+      "category": "插件",
+      "summary": "knowledge-work-plugins：Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
+      "opportunity": "星标增量为 285（0.9%）。若客户正在找可落地的插件，可以把 anthropics/knowledge-work-plugins 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 17,
@@ -329,30 +329,30 @@
         "ai",
         "llm"
       ],
-      "stars": 303743,
-      "delta": 266,
-      "growthPercent": 0.08765079396461677,
+      "stars": 303756,
+      "delta": 279,
+      "growthPercent": 0.09193447938394013,
       "deltaSource": "snapshot",
       "createdAt": "2025-10-09T19:45:18Z",
       "category": "框架",
       "summary": "superpowers：An agentic skills framework & software development methodology that works.",
-      "opportunity": "星标增量为 266（0.1%）。涉及 ai、llm。若客户正在找可落地的框架，可以把 obra/superpowers 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 279（0.1%）。涉及 ai、llm。若客户正在找可落地的框架，可以把 obra/superpowers 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 18,
-      "fullName": "anthropics/knowledge-work-plugins",
-      "url": "https://github.com/anthropics/knowledge-work-plugins",
-      "description": "Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "language": "Python",
+      "fullName": "colinhacks/reylo",
+      "url": "https://github.com/colinhacks/reylo",
+      "description": "Import .sql files into TypeScript with full type inference and zero codegen.",
+      "language": "Rust",
       "topics": [],
-      "stars": 31587,
-      "delta": 249,
-      "growthPercent": 0.7945625119663029,
+      "stars": 673,
+      "delta": 275,
+      "growthPercent": 69.09547738693468,
       "deltaSource": "snapshot",
-      "createdAt": "2026-01-23T20:11:54Z",
-      "category": "插件",
-      "summary": "knowledge-work-plugins：Open source repository of plugins primarily intended for knowledge workers to use in Claude Cowork",
-      "opportunity": "星标增量为 249（0.8%）。若客户正在找可落地的插件，可以把 anthropics/knowledge-work-plugins 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "createdAt": "2026-10-21T00:16:54Z",
+      "category": "工具",
+      "summary": "reylo：Import .sql files into TypeScript with full type inference and zero codegen.",
+      "opportunity": "星标增量为 275（69.1%）。若客户正在找可落地的工具，可以把 colinhacks/reylo 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 19,
@@ -361,14 +361,14 @@
       "description": null,
       "language": "C",
       "topics": [],
-      "stars": 229,
-      "delta": 229,
+      "stars": 240,
+      "delta": 240,
       "growthPercent": null,
       "deltaSource": "created-window",
       "createdAt": "2026-10-22T06:20:36Z",
       "category": "工具",
       "summary": "oosexgang/hackios-xnu-userland 没有简介。当前归类为工具。",
-      "opportunity": "星标增量为 229。若客户正在找可落地的工具，可以把 oosexgang/hackios-xnu-userland 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 240。若客户正在找可落地的工具，可以把 oosexgang/hackios-xnu-userland 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 20,
@@ -379,14 +379,14 @@
       "topics": [
         "llm"
       ],
-      "stars": 101120,
-      "delta": 216,
-      "growthPercent": 0.21406485372234993,
+      "stars": 101136,
+      "delta": 232,
+      "growthPercent": 0.22992150955363513,
       "deltaSource": "snapshot",
       "createdAt": "2026-02-19T21:44:05Z",
       "category": "工具",
       "summary": "taste-skill：Agent skills that give coding agents taste: art direction, reference images and a browser check instead of generic AI pages",
-      "opportunity": "星标增量为 216（0.2%）。涉及 llm。若客户正在找可落地的工具，可以把 Leonxlnx/taste-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 232（0.2%）。涉及 llm。若客户正在找可落地的工具，可以把 Leonxlnx/taste-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 21,
@@ -395,14 +395,14 @@
       "description": "An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
       "language": "Python",
       "topics": [],
-      "stars": 139018,
-      "delta": 213,
-      "growthPercent": 0.1534526854219949,
+      "stars": 139029,
+      "delta": 224,
+      "growthPercent": 0.1613774719930838,
       "deltaSource": "snapshot",
       "createdAt": "2025-11-30T11:36:31Z",
       "category": "应用",
       "summary": "ui-ux-pro-max-skill：An AI skill that provides design intelligence for building professional UI/UX across multiple platforms.",
-      "opportunity": "星标增量为 213（0.2%）。若客户正在找可落地的应用，可以把 nextlevelbuilder/ui-ux-pro-max-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 224（0.2%）。若客户正在找可落地的应用，可以把 nextlevelbuilder/ui-ux-pro-max-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 22,
@@ -413,51 +413,17 @@
       "topics": [
         "llm"
       ],
-      "stars": 220212,
-      "delta": 210,
-      "growthPercent": 0.09545367769383915,
+      "stars": 220222,
+      "delta": 220,
+      "growthPercent": 0.09999909091735529,
       "deltaSource": "snapshot",
       "createdAt": "2025-04-30T20:08:00Z",
       "category": "工具",
       "summary": "opencode：The open source coding agent.",
-      "opportunity": "星标增量为 210（0.1%）。涉及 llm。若客户正在找可落地的工具，可以把 anomalyco/opencode 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 220（0.1%）。涉及 llm。若客户正在找可落地的工具，可以把 anomalyco/opencode 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     },
     {
       "rank": 23,
-      "fullName": "harry0703/MoneyPrinterTurbo",
-      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
-      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-      "language": "Python",
-      "topics": [
-        "llm"
-      ],
-      "stars": 134243,
-      "delta": 202,
-      "growthPercent": 0.1507001589066032,
-      "deltaSource": "snapshot",
-      "createdAt": "2024-03-11T02:57:34Z",
-      "category": "工具",
-      "summary": "MoneyPrinterTurbo：利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
-      "opportunity": "星标增量为 202（0.2%）。涉及 llm。若客户正在找可落地的工具，可以把 harry0703/MoneyPrinterTurbo 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
-    },
-    {
-      "rank": 24,
-      "fullName": "Acelogic/Snapintosh",
-      "url": "https://github.com/Acelogic/Snapintosh",
-      "description": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
-      "language": "Python",
-      "topics": [],
-      "stars": 558,
-      "delta": 191,
-      "growthPercent": 52.043596730245234,
-      "deltaSource": "snapshot",
-      "createdAt": "2026-10-22T01:40:05Z",
-      "category": "工具",
-      "summary": "Snapintosh：EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
-      "opportunity": "星标增量为 191（52.0%）。若客户正在找可落地的工具，可以把 Acelogic/Snapintosh 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
-    },
-    {
-      "rank": 25,
       "fullName": "tt-a1i/archify",
       "url": "https://github.com/tt-a1i/archify",
       "description": "Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
@@ -465,14 +431,48 @@
       "topics": [
         "llm"
       ],
-      "stars": 87609,
-      "delta": 191,
-      "growthPercent": 0.21849047107003133,
+      "stars": 87636,
+      "delta": 218,
+      "growthPercent": 0.24937655860349126,
       "deltaSource": "snapshot",
       "createdAt": "2026-04-15T05:27:37Z",
       "category": "插件",
       "summary": "archify：Turn any idea, plan, or codebase into a beautiful interactive diagram. An agent skill for Claude Code, Codex, and more.",
-      "opportunity": "星标增量为 191（0.2%）。涉及 llm。若客户正在找可落地的插件，可以把 tt-a1i/archify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+      "opportunity": "星标增量为 218（0.2%）。涉及 llm。若客户正在找可落地的插件，可以把 tt-a1i/archify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 24,
+      "fullName": "harry0703/MoneyPrinterTurbo",
+      "url": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "description": "利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "language": "Python",
+      "topics": [
+        "llm"
+      ],
+      "stars": 134257,
+      "delta": 216,
+      "growthPercent": 0.16114472437537766,
+      "deltaSource": "snapshot",
+      "createdAt": "2024-03-11T02:57:34Z",
+      "category": "工具",
+      "summary": "MoneyPrinterTurbo：利用 AI 大模型和自动化工作流，根据主题或关键词一键生成高清短视频。Generate HD short videos from a topic or keyword with an automated AI workflow.",
+      "opportunity": "星标增量为 216（0.2%）。涉及 llm。若客户正在找可落地的工具，可以把 harry0703/MoneyPrinterTurbo 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 25,
+      "fullName": "Acelogic/Snapintosh",
+      "url": "https://github.com/Acelogic/Snapintosh",
+      "description": "EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
+      "language": "Python",
+      "topics": [],
+      "stars": 562,
+      "delta": 195,
+      "growthPercent": 53.13351498637602,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-10-22T01:40:05Z",
+      "category": "工具",
+      "summary": "Snapintosh：EL2 hypervisor and toolchain that boots macOS on the ASUS A16 (Snapdragon X2 Elite), with an Adreno Metal/IOGPU stack",
+      "opportunity": "星标增量为 195（53.1%）。若客户正在找可落地的工具，可以把 Acelogic/Snapintosh 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
     }
   ]
 }
