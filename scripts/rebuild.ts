@@ -15,6 +15,7 @@ import type {
 } from "../src/lib/types";
 import { resolvePagesHost } from "../src/lib/pages-host";
 import { sendHtmlEmail, smtpSettingsFromEnv } from "./email";
+import { newsletterSenderFromEnv } from "./newsletter";
 import { readJson, repoRoot, writeJson } from "./paths";
 
 export type RebuildOptions = {
@@ -62,23 +63,43 @@ async function deliver(report: DayReport, subjectPrefix: string, limit: number, 
     console.log("SKIP_EMAIL is set, digest saved without sending");
     return "skipped";
   }
+  const subject = `${subjectPrefix} ${report.date}`;
+  const html = renderDigestHtml(report, { pageUrl, limit });
+  const text = renderDigestMarkdown(report, pageUrl);
+  let sent = false;
+  let failed = false;
+
+  const newsletter = newsletterSenderFromEnv(process.env);
+  if (!newsletter) {
+    console.log("Newsletter secrets absent, subscriber send skipped");
+  } else {
+    try {
+      const result = await newsletter.send({ date: report.date, subject, html, text, pageUrl });
+      console.log(result === "already-sent" ? "Subscriber digest was already queued today" : "Queued the subscriber digest");
+      sent = true;
+    } catch (error) {
+      failed = true;
+      console.error(`Subscriber digest failed: ${error instanceof Error ? error.message : error}`);
+    }
+  }
+
   const settings = smtpSettingsFromEnv(process.env);
   if (!settings) {
-    console.log("SMTP secrets absent, HTML digest saved without sending");
-    return "skipped";
+    console.log("SMTP secrets absent, internal copy skipped");
+  } else {
+    try {
+      await sendHtmlEmail(settings, { subject, html, text });
+      console.log(`Sent the internal digest copy to ${settings.to}`);
+      sent = true;
+    } catch (error) {
+      failed = true;
+      console.error(`Internal digest failed: ${error instanceof Error ? error.message : error}`);
+    }
   }
-  try {
-    await sendHtmlEmail(settings, {
-      subject: `${subjectPrefix} ${report.date}`,
-      html: renderDigestHtml(report, { pageUrl, limit }),
-      text: renderDigestMarkdown(report, pageUrl),
-    });
-    console.log(`Sent the daily digest to ${settings.to}`);
-    return "sent";
-  } catch (error) {
-    console.error(`Email failed: ${error instanceof Error ? error.message : error}`);
-    return "failed";
-  }
+
+  if (sent) return "sent";
+  if (failed) return "failed";
+  return "skipped";
 }
 
 function removeStale(folder: string, keep: Set<string>): void {

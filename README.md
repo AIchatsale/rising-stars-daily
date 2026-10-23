@@ -131,7 +131,43 @@ npm run build
 | `SMTP_FROM` | 发件人 |
 | `SMTP_TO` | 收件人，多个地址用逗号分隔 |
 
-`SMTP_HOST`、`SMTP_FROM`、`SMTP_TO` 缺任何一个，就只把 HTML 留在 `data/digests/日期.html`，不发信。手动运行时可以勾选 workflow 的 `skip_email`。
+`SMTP_HOST`、`SMTP_FROM`、`SMTP_TO` 缺任何一个，就不发这封内部副本。HTML 仍写在 `data/digests/日期.html`。手动运行时可以勾选 workflow 的 `skip_email`，那时订阅列表和内部副本都不发。
+
+## 每日订阅（Buttondown）
+
+首页标题下和页脚各有一张订阅卡。邮箱必填，公司名和方向（AI、SaaS、游戏、电商）选填。站点是纯静态的，所以订阅直接交给邮件服务，不经过仓库服务器。开通后，表单用普通 POST 在新窗口打开 Buttondown 的确认页，看板留在原处。确认页里如果出现验证码，要在那个窗口完成；不要改成 `fetch`，否则这一步会断。还没填写用户名时，卡片会写明还没开通，输入框也不会带上字段名，地址不会被提交。
+
+默认服务是 [Buttondown](https://buttondown.com/pricing?plan=free)。免费档是 **100 个活跃订阅者**，按他们的定价说明，每天给整份名单发一封信不另收费，API 在免费档可用。表单提交到公开地址 `https://buttondown.com/api/emails/embed-subscribe/用户名`，页面里不放 API 密钥。Buttondown 默认要求双重确认：对方点开确认信才算订阅，发出去的邮件自带退订。超过 100 人后要升到 Basic（目前 $9/月）。
+
+没有按这个方案用另外几家，是因为免费档对不上「静态页收集 + 每天发给几百人」：
+
+- [Brevo 免费档](https://help.brevo.com/hc/en-us/articles/208580669-FAQs-What-are-the-limits-of-the-Free-plan) 每天 300 封，联系人可以很多，但自己画的表单要带 API 密钥才能做双重确认。超过 300 人的活动要第二天手动重发。
+- [MailerLite 免费档](https://www.mailerlite.com/pricing) 250 个订阅者、每月 2,500 封。每天发给 250 人会超过月额度，而且免费档的 API 不能发信。
+- [Mailchimp 免费档](https://mailchimp.com/help/about-mailchimp-pricing-plans/) 250 个联系人、每月 500 封（每天最多 250）。每天一封日报会很快用完，接口也不能从浏览器调用。
+- [Resend 营销免费档](https://resend.com/pricing?product=marketing) 有 1,000 个联系人、广播不限封数，但双重确认要自己的服务器和 webhook。GitHub Pages 上做不到，把密钥放进页面也不安全。
+
+### 要创建的账号
+
+1. 打开 [buttondown.com](https://buttondown.com/pricing?plan=free) 注册一个免费通讯。用户名会出现在 `https://buttondown.com/你的用户名`。
+2. 在通讯设置里保持双重确认（这是默认）。确认信和退订链接用 Buttondown 自带的即可。
+3. 可选：在订阅设置里加两个字段。`company` 用文本；`interests` 用多选，选项 ID 写成 `ai`、`saas`、`games`、`commerce`（对应 AI、SaaS、游戏、电商）。建好之后，公司名和方向会出现在订阅者资料里。不建字段时，表单仍会带上这两项。
+4. 在账号的 API keys 页面新建一把密钥。它只放在 GitHub Secret 里。
+
+### 要填的 Variables 和 Secrets
+
+仓库 **Settings → Secrets and variables → Actions**。
+
+| 类型 | 名字 | 填什么 |
+| --- | --- | --- |
+| Variable | `BUTTONDOWN_USERNAME` | Buttondown 用户名，不要加网址 |
+| Variable | `NEWSLETTER_PROVIDER` | 留空或填 `buttondown`。别的值会跳过发信 |
+| Secret | `BUTTONDOWN_API_KEY` | 上一步的 API 密钥 |
+
+`BUTTONDOWN_USERNAME` 会在 **Pages** 构建时写进页面，用来把表单提交到 Buttondown。改完这个 Variable 之后要再跑一次 **Pages**（或随便推一次 `main`），否则页面上还是「还没开通」。`BUTTONDOWN_API_KEY` 只在 **Rising Stars** 采集时使用：把当天的 HTML 日报排队发出去，正文里有今日建议、增速榜、回到看板的链接，以及 PandaWM 官网。同一天重复跑时用固定 slug `githubstars-日期`，已经排队过就不再发一封。
+
+发信用的是当前 API 版本 `2026-04-01`。这一版第一次把状态设成 `about_to_send` 会要求确认，所以工作流每次请求都带 `X-Buttondown-Live-Dangerously: true`，不用在网页里再点一次。来源：[Safer defaults for the email creation API](https://buttondown.com/blog/safer-email-api-defaults)。
+
+两个都没配时，采集照常完成，只在日志里写 subscriber send skipped。页面上的表单会提示还没开通，并且不会把邮箱提交出去。
 
 ## 部署到 GitHub
 

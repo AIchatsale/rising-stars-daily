@@ -5,6 +5,7 @@ import { useEffect, useMemo, useState } from "react";
 import { LibraryGate } from "@/components/library-gate";
 import { Picks } from "@/components/picks";
 import { SiteFooter } from "@/components/site-footer";
+import { SubscribeForm } from "@/components/subscribe-form";
 import { SiteHeader } from "@/components/site-header";
 import { RankingTable, type SortKey } from "@/components/ranking-table";
 import { RisingCard } from "@/components/rising-card";
@@ -205,6 +206,7 @@ export function Dashboard() {
             </>
           ) : null}
         </div>
+        <SubscribeForm variant="inline" />
       </header>
 
       {copyState ? <p className="text-sm text-muted-foreground">{copyState}</p> : null}

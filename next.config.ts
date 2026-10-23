@@ -18,6 +18,8 @@ const nextConfig: NextConfig = {
   env: {
     NEXT_PUBLIC_BASE_PATH: pages.basePath,
     NEXT_PUBLIC_PAGES_URL: pages.url,
+    NEXT_PUBLIC_NEWSLETTER_PROVIDER: process.env.NEWSLETTER_PROVIDER || process.env.NEXT_PUBLIC_NEWSLETTER_PROVIDER || "buttondown",
+    NEXT_PUBLIC_BUTTONDOWN_USERNAME: process.env.BUTTONDOWN_USERNAME || process.env.NEXT_PUBLIC_BUTTONDOWN_USERNAME || "",
   },
   ...(pages.basePath ? { basePath: pages.basePath, assetPrefix: pages.basePath } : {}),
 };

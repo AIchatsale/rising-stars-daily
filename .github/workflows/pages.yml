@@ -46,6 +46,8 @@ jobs:
           BASE_PATH: ${{ steps.paths.outputs.base_path }}
           NEXT_PUBLIC_BASE_PATH: ${{ steps.paths.outputs.base_path }}
           PAGES_URL: ${{ steps.paths.outputs.pages_url }}
+          NEWSLETTER_PROVIDER: ${{ vars.NEWSLETTER_PROVIDER }}
+          BUTTONDOWN_USERNAME: ${{ vars.BUTTONDOWN_USERNAME }}
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3
