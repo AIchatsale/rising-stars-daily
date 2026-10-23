@@ -1,3 +1,4 @@
+import { toLibraryRepo, type GithubLibraryJson, type LibraryRepo } from "../src/lib/library";
 import type { RepoSnapshot } from "../src/lib/types";
 
 type GithubRepoJson = {
@@ -17,7 +18,8 @@ type GithubRepoJson = {
   pushed_at?: string;
   html_url?: string;
   license?: { spdx_id?: string | null } | null;
-  owner?: { login?: string };
+  owner?: { login?: string; type?: string };
+  homepage?: string | null;
 };
 
 type GraphqlRepo = {
@@ -35,7 +37,8 @@ type GraphqlRepo = {
   url?: string | null;
   primaryLanguage?: { name?: string | null } | null;
   licenseInfo?: { spdxId?: string | null } | null;
-  owner?: { login?: string | null } | null;
+  owner?: { login?: string | null; __typename?: string | null } | null;
+  homepageUrl?: string | null;
   issues?: { totalCount?: number | null } | null;
   repositoryTopics?: { nodes?: ({ topic?: { name?: string | null } | null } | null)[] | null } | null;
 };
@@ -94,6 +97,32 @@ function mapGraphqlRepo(node: GraphqlRepo | null): RepoSnapshot | null {
     archived: false,
     isFork: false,
   };
+}
+
+function mapLibraryGraphql(node: GraphqlRepo | null): LibraryRepo | null {
+  if (!node?.nameWithOwner || !node.createdAt || !node.pushedAt) return null;
+  const topics = (node.repositoryTopics?.nodes ?? [])
+    .map((item) => item?.topic?.name)
+    .filter((topic): topic is string => Boolean(topic));
+  return toLibraryRepo({
+    full_name: node.nameWithOwner,
+    private: node.isPrivate === true,
+    fork: node.isFork === true,
+    archived: node.isArchived === true,
+    description: node.description,
+    language: node.primaryLanguage?.name,
+    topics,
+    stargazers_count: node.stargazerCount ?? 0,
+    forks_count: node.forkCount ?? 0,
+    created_at: node.createdAt,
+    pushed_at: node.pushedAt,
+    homepage: node.homepageUrl,
+    license: { spdx_id: node.licenseInfo?.spdxId },
+    owner: {
+      login: node.owner?.login ?? undefined,
+      type: node.owner?.__typename === "Organization" ? "Organization" : "User",
+    },
+  });
 }
 
 export class GithubClient {
@@ -156,6 +185,85 @@ export class GithubClient {
       await sleep(this.searchGapMs);
     }
     await sleep(this.searchGapMs);
+    return repos;
+  }
+
+  async searchLibraryPage(query: string, page: number, perPage: number): Promise<{ total: number; incomplete: boolean; repos: LibraryRepo[] }> {
+    const url = `${API}/search/repositories?q=${encodeURIComponent(query)}&sort=stars&order=desc&per_page=${perPage}&page=${page}`;
+    const response = await this.request(url);
+    if (!response.ok) {
+      const body = await response.text();
+      throw new Error(`Library search failed (${response.status}) for "${query.slice(0, 120)}": ${body.slice(0, 180)}`);
+    }
+    const payload = (await response.json()) as { items?: GithubLibraryJson[]; total_count?: number; incomplete_results?: boolean };
+    const repos = (payload.items ?? []).map((item) => toLibraryRepo(item)).filter((item): item is LibraryRepo => item != null);
+    console.log(
+      `Library "${query.slice(0, 88)}" page ${page}: ${repos.length}/${payload.total_count ?? "?"} remaining ${response.headers.get("x-ratelimit-remaining") ?? "?"}`,
+    );
+    await sleep(this.searchGapMs);
+    return { total: payload.total_count ?? repos.length, incomplete: payload.incomplete_results === true, repos };
+  }
+
+  async hydrateLibrary(fullNames: string[]): Promise<LibraryRepo[]> {
+    if (fullNames.length === 0) return [];
+    if (!this.token) {
+      const repos: LibraryRepo[] = [];
+      for (const fullName of fullNames.slice(0, 15)) {
+        const response = await this.request(`${API}/repos/${fullName}`);
+        if (!response.ok) continue;
+        const mapped = toLibraryRepo((await response.json()) as GithubLibraryJson);
+        if (mapped) repos.push(mapped);
+        await sleep(1_000);
+      }
+      return repos;
+    }
+    const repos: LibraryRepo[] = [];
+    const batchSize = 20;
+    for (let offset = 0; offset < fullNames.length; offset += batchSize) {
+      const batch = fullNames.slice(offset, offset + batchSize);
+      const fields = batch
+        .map((fullName, index) => {
+          const [owner, name] = fullName.split("/");
+          if (!owner || !name) return "";
+          return `r${index}: repository(owner: ${JSON.stringify(owner)}, name: ${JSON.stringify(name)}) {
+            nameWithOwner
+            description
+            stargazerCount
+            forkCount
+            isArchived
+            isFork
+            isPrivate
+            createdAt
+            pushedAt
+            homepageUrl
+            primaryLanguage { name }
+            licenseInfo { spdxId }
+            owner { login __typename }
+            repositoryTopics(first: 8) { nodes { topic { name } } }
+          }`;
+        })
+        .filter(Boolean)
+        .join("\n");
+      const response = await this.request(`${API}/graphql`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query: `query {\n${fields}\n}` }),
+      });
+      if (!response.ok) {
+        const body = await response.text();
+        throw new Error(`Library hydration failed (${response.status}): ${body.slice(0, 180)}`);
+      }
+      const payload = (await response.json()) as {
+        data?: Record<string, GraphqlRepo | null>;
+        errors?: { message?: string }[];
+      };
+      if (payload.errors?.length) console.warn(`Library hydration warnings: ${payload.errors[0]?.message ?? "unknown"}`);
+      batch.forEach((_, index) => {
+        const mapped = mapLibraryGraphql(payload.data?.[`r${index}`] ?? null);
+        if (mapped) repos.push(mapped);
+      });
+      await sleep(300);
+    }
     return repos;
   }
 

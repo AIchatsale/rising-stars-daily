@@ -89,5 +89,22 @@ export function parseConfig(raw: unknown): AppConfig {
     },
     site: resolvePagesHost(expectSite(raw.site)),
     recommendCount: expectPositiveInt(raw.recommendCount ?? 3, "recommendCount"),
+    library: parseLibrary(raw.library),
+  };
+}
+
+function parseLibrary(value: unknown): AppConfig["library"] {
+  const library = isRecord(value) ? value : {};
+  const weekday = library.fullRefreshWeekday ?? 0;
+  if (typeof weekday !== "number" || !Number.isInteger(weekday) || weekday < 0 || weekday > 6) {
+    throw new Error("library.fullRefreshWeekday must be an integer from 0 (Sunday) to 6");
+  }
+  return {
+    minStars: expectPositiveInt(library.minStars ?? 5000, "library.minStars"),
+    fullRefreshWeekday: weekday,
+    dailyHydrateCap: expectPositiveInt(library.dailyHydrateCap ?? 600, "library.dailyHydrateCap"),
+    llmNotesPerRun: expectPositiveInt(library.llmNotesPerRun ?? 24, "library.llmNotesPerRun"),
+    activeWithinDays: expectPositiveInt(library.activeWithinDays ?? 90, "library.activeWithinDays"),
+    maxSearchRequests: expectPositiveInt(library.maxSearchRequests ?? 420, "library.maxSearchRequests"),
   };
 }

@@ -7,6 +7,7 @@ import type { RepoSnapshot, Snapshot } from "../src/lib/types";
 import { loadDotEnv } from "./env";
 import { GithubClient } from "./github";
 import { readJson, repoRoot, writeJson } from "./paths";
+import { refreshLibrary } from "./collect-library";
 import { rebuild } from "./rebuild";
 import { fetchTrending } from "./trending";
 
@@ -110,6 +111,11 @@ async function main(): Promise<void> {
   };
   writeJson(path.join(repoRoot, "data/snapshots/live", `${date}.json`), snapshot);
   console.log(`Wrote live snapshot ${date} with ${repos.length} repositories`);
+  try {
+    await refreshLibrary({ date, config, token, env: process.env });
+  } catch (error) {
+    console.error(`High-star library refresh failed: ${error instanceof Error ? error.message : error}`);
+  }
   await rebuild({ llmDate: date, sendEmail: true });
 }
 

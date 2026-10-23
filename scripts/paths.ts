@@ -4,9 +4,10 @@ import { fileURLToPath } from "node:url";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 
-export function writeJson(file: string, data: unknown): void {
+export function writeJson(file: string, data: unknown, space: number | null = 2): void {
   fs.mkdirSync(path.dirname(file), { recursive: true });
-  fs.writeFileSync(file, `${JSON.stringify(data, null, 2)}\n`);
+  const body = space == null ? JSON.stringify(data) : JSON.stringify(data, null, space);
+  fs.writeFileSync(file, space == null ? body : `${body}\n`);
 }
 
 export function readJson<T>(file: string): T {

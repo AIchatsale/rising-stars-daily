@@ -20,6 +20,26 @@
 - 榜单按增量排序，不按百分比，避免很小的仓库因为翻倍挤到前面。
 - 中文看板：推荐卡片、话题和语言筛选、搜索、可排序表格、多日星标折线、按日期回看。
 - 每天写出 `data/digests/` 下的 Markdown、JSON、HTML。配了 SMTP 才会寄出 HTML。
+- 高星项目库：收集 5,000 星以上的仓库，按 5K / 10K / 20K / 40K 分档，标出协议、主页、组织账号、近期活跃和方向，并给一句中文商业用途说明。
+
+## 高星项目库
+
+页面在 `/library/`，和昇星日报共用顶部导航。数据在 `data/library/catalog.json`，星标历史在 `data/library/history.json`。
+
+搜索要避开 GitHub「每个查询最多 1000 条」的限制，所以按星标区间切开；某个区间仍然超过 1000 条时，再按创建日期对半拆开。默认排除 fork 和已归档仓库。
+
+- 每周日（UTC）做一次全量搜索，补上新进入 5,000 星的仓库。
+- 其余日子只更新 20,000 星以上的区间，并轮换刷新一批已知仓库的星标。有 `GITHUB_TOKEN` 时每天大约刷新 600 个。
+- 7 日、30 日增量要等同一仓库至少有一个足够早的历史点才会显示。
+- 每个仓库都有规则生成的中文说明。配置了 `LLM_API_KEY` 时，每次再给星标最高、还没有模型说明的一小批项目补一句模型说明，失败就保留规则说明。
+
+本地全量重建：
+
+```bash
+LIBRARY_FULL=true npm run library
+```
+
+手动跑 Actions 时可以勾选 **Full GitHub search for the high-star library**。不勾的话，只有周日会全量搜索。
 
 ## 本地运行
 
@@ -66,6 +86,11 @@ npm run build
 | `llm.maxRepos` / `llm.categories` | 模型最多概括多少个上榜项目，以及允许的分类 |
 | `email.topInEmail` | 邮件里的榜单长度。页面上的 HTML 文件仍包含完整上榜名单 |
 | `discover.githubTrending` | 设为 `false` 就不再请求 Trending 页面 |
+| `library.minStars` | 高星项目库的最低星标，默认 5000 |
+| `library.fullRefreshWeekday` | 全量搜索的 UTC 星期，`0` 是周日 |
+| `library.dailyHydrateCap` | 非全量那天额外刷新多少个 2 万星以下的已知仓库 |
+| `library.llmNotesPerRun` | 每次最多给多少个项目补模型说明 |
+| `library.activeWithinDays` | 「近期活跃」看最近多少天有推送，默认 90 |
 | `site.domain` | Pages 自定义域名，默认 `githubstars.pandawm.com`。构建时写入产物里的 `CNAME` |
 | `site.basePath` | 资源前缀。自定义域名根路径留空；只有发布到 `username.github.io/仓库名/` 时才写成 `/仓库名` |
 | `site.url` | 可选。邮件和 Markdown 里的看板链接。不填则由域名和 `basePath` 拼出来 |
@@ -118,7 +143,7 @@ npm run build
 4. 在 `pandawm.com` 的 DNS 添加一条 CNAME：主机名 `githubstars`，目标 `aichatsale.github.io`。
 5. Settings → Pages → Custom domain 填 `githubstars.pandawm.com`。证书签发后再勾选 Enforce HTTPS。构建产物根目录的 `CNAME` 也是这个域名，部署时会带上。
 6. 需要模型和邮件时，在 Settings → Secrets and variables → Actions 添加上一节的 Secrets。`GITHUB_TOKEN` 由 Actions 自动提供，用来读公开仓库和把数据推回默认分支，不要自己建一个同名 Secret。
-7. 在 Actions 里手动运行 **Rising Stars**，或等到每天 01:00 UTC。
+7. 在 Actions 里手动运行 **Rising Stars**，或等到每天 01:00 UTC。仓库里已经有一份高星项目库全量结果；只有想马上重搜时才勾选 **Full GitHub search for the high-star library**。不勾选时，周日会自动全量搜索，其他日子只更新星标。
 
 工作流会：采集 → 把 `data/` 提交回仓库 → 按 `config.json` 的 `site` 构建静态页面 → 部署到 Pages。默认 `site.basePath` 为空，所以页面在域名根目录。邮件和 Markdown 里的链接默认是 `https://githubstars.pandawm.com/`。
 

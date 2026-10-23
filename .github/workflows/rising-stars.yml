@@ -9,6 +9,10 @@ on:
         description: Skip SMTP delivery even when mail secrets are set
         type: boolean
         default: false
+      refresh_library:
+        description: Full GitHub search for the high-star library
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -54,6 +58,7 @@ jobs:
           SMTP_FROM: ${{ secrets.SMTP_FROM }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           SKIP_EMAIL: ${{ github.event_name == 'workflow_dispatch' && inputs.skip_email && 'true' || 'false' }}
+          LIBRARY_FULL: ${{ github.event_name == 'workflow_dispatch' && inputs.refresh_library && 'true' || 'false' }}
           PAGES_DOMAIN: ${{ steps.paths.outputs.pages_domain }}
           BASE_PATH: ${{ steps.paths.outputs.base_path }}
           NEXT_PUBLIC_BASE_PATH: ${{ steps.paths.outputs.base_path }}
@@ -68,7 +73,7 @@ jobs:
           if git diff --staged --quiet; then
             echo "No data changes to commit"
           else
-            git commit -m "chore: rising stars snapshot $(date -u +%F)"
+            git commit -m "chore: daily snapshot $(date -u +%F)"
             git push
           fi
 

@@ -69,5 +69,13 @@
     "domain": "githubstars.pandawm.com",
     "basePath": ""
   },
+  "library": {
+    "minStars": 5000,
+    "fullRefreshWeekday": 0,
+    "dailyHydrateCap": 600,
+    "llmNotesPerRun": 24,
+    "activeWithinDays": 90,
+    "maxSearchRequests": 420
+  },
   "recommendCount": 3
 }

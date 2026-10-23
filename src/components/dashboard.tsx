@@ -3,6 +3,7 @@
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { Picks } from "@/components/picks";
+import { SiteNav } from "@/components/site-nav";
 import { RankingTable, type SortKey } from "@/components/ranking-table";
 import { RisingCard } from "@/components/rising-card";
 import { Badge } from "@/components/ui/badge";
@@ -176,7 +177,8 @@ export function Dashboard() {
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-8 md:px-8 md:py-10">
       <header className="flex flex-col gap-6 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
         <div className="max-w-2xl">
-          <p className="font-heading text-xs tracking-[0.22em] text-primary">RISING STARS</p>
+          <SiteNav current="rising" />
+          <p className="mt-4 font-heading text-xs tracking-[0.22em] text-primary">RISING STARS</p>
           <h1 className="mt-1 font-heading text-4xl tracking-tight md:text-5xl">昇星日报</h1>
           <p className="mt-3 text-sm leading-6 text-muted-foreground">
             过去 24 小时里星标涨得最快的开源项目。给每天要向客户推荐方案的团队，用来找值得跟进的机会。

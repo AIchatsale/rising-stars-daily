@@ -10,6 +10,7 @@
     "test": "vitest run",
     "sample": "tsx scripts/generate-sample.ts",
     "collect": "tsx scripts/collect.ts",
+    "library": "tsx scripts/collect-library.ts",
     "rebuild": "tsx scripts/rebuild.ts",
     "copy-data": "node scripts/copy-data.mjs"
   },

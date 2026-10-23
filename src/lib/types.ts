@@ -49,6 +49,14 @@ export type AppConfig = {
   };
   site: PagesHostConfig;
   recommendCount: number;
+  library: {
+    minStars: number;
+    fullRefreshWeekday: number;
+    dailyHydrateCap: number;
+    llmNotesPerRun: number;
+    activeWithinDays: number;
+    maxSearchRequests: number;
+  };
 };
 
 export type RepoSnapshot = {
