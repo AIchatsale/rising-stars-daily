@@ -49,7 +49,7 @@ export function SiteHeader() {
                   key={item.id}
                   href={siteHash(item.id)}
                   aria-current={active ? "location" : undefined}
-                  className={`whitespace-nowrap rounded-full px-2 py-1.5 text-[11px] font-medium sm:px-3 sm:text-xs md:text-sm ${active ? "bg-primary text-primary-foreground" : "text-muted-foreground hover:text-foreground"}`}
+                  className={`choice choice-pill choice-calm whitespace-nowrap rounded-full border border-transparent px-2 py-1.5 text-[11px] font-medium sm:px-3 sm:text-xs md:text-sm ${active ? "bg-primary text-primary-foreground" : "bg-transparent text-muted-foreground hover:text-foreground"}`}
                 >
                   {item.label}
                 </a>

@@ -240,7 +240,8 @@ export function Dashboard() {
                 </Button>
               </div>
             </div>
-            <div className="flex gap-2 overflow-x-auto pb-1">
+            <p className="inline-flex w-fit items-center rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">点击切换</p>
+            <div className="flex gap-2 overflow-x-auto px-0.5 py-1">
               {index.dates.map((item) => {
                 const meta = index.entries.find((entryItem) => entryItem.date === item);
                 const active = item === date;
@@ -250,7 +251,7 @@ export function Dashboard() {
                     type="button"
                     aria-pressed={active}
                     onClick={() => setDate(item)}
-                    className={`shrink-0 rounded-full border px-3 py-1.5 text-left text-xs shadow-sm ${active ? "border-transparent bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/30"}`}
+                    className={`choice choice-pill shrink-0 rounded-full border px-3 py-1.5 text-left text-xs ${active ? "bg-primary text-primary-foreground" : "bg-card"}`}
                   >
                     <span className="block font-medium">{formatShortDate(item)}</span>
                     <span className={active ? "text-primary-foreground/80" : "text-muted-foreground"}>
@@ -297,7 +298,7 @@ export function Dashboard() {
                       key={leader.topicId}
                       type="button"
                       onClick={() => setTopic(leader.topicId)}
-                      className="surface px-3 py-3 text-left transition hover:border-primary/40"
+                      className="choice choice-calm surface px-3 py-3 text-left"
                     >
                       <p className="text-xs text-muted-foreground">{leader.label}</p>
                       <p className="mt-1 truncate text-sm font-medium">{leader.fullName}</p>
@@ -338,11 +339,11 @@ export function Dashboard() {
               </label>
             </div>
             <div className="flex gap-2 overflow-x-auto">
-              <Button type="button" size="sm" variant={topic === "all" ? "default" : "outline"} onClick={() => setTopic("all")}>
+              <Button type="button" size="sm" variant={topic === "all" ? "default" : "outline"} className="choice choice-pill choice-calm" aria-pressed={topic === "all"} onClick={() => setTopic("all")}>
                 全部
               </Button>
               {(index.filters.topics ?? []).map((item) => (
-                <Button key={item.id} type="button" size="sm" variant={topic === item.id ? "default" : "outline"} onClick={() => setTopic(item.id)}>
+                <Button key={item.id} type="button" size="sm" variant={topic === item.id ? "default" : "outline"} className="choice choice-pill choice-calm" aria-pressed={topic === item.id} onClick={() => setTopic(item.id)}>
                   {item.label}
                 </Button>
               ))}

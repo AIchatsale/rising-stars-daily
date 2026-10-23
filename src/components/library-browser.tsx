@@ -178,20 +178,27 @@ export function LibraryBrowser() {
 
       {catalog && !error ? (
         <>
-          <dl className="grid grid-cols-2 gap-3 md:grid-cols-4">
-            {LIBRARY_TIERS.map((item) => (
-              <button
-                key={item.id}
-                type="button"
-                aria-pressed={tier === item.id}
-                onClick={() => setTier((current) => (current === item.id ? "all" : item.id))}
-                className={`surface px-4 py-3 text-left transition ${tier === item.id ? "border-transparent bg-primary text-primary-foreground shadow-none" : "hover:border-primary/40"}`}
-              >
-                <dt className={`text-xs ${tier === item.id ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{item.label} · {item.range}</dt>
-                <dd className="mt-1 text-2xl font-semibold tabular-nums tracking-tight">{formatNumber(counts[item.id])}</dd>
-              </button>
-            ))}
-          </dl>
+          <div className="flex flex-col gap-2">
+            <p className="inline-flex w-fit items-center rounded-full bg-primary/10 px-2.5 py-1 text-xs font-medium text-primary">点击查看</p>
+            <dl className="grid grid-cols-2 gap-3 md:grid-cols-4">
+              {LIBRARY_TIERS.map((item) => (
+                <button
+                  key={item.id}
+                  type="button"
+                  aria-pressed={tier === item.id}
+                  onClick={() => setTier((current) => (current === item.id ? "all" : item.id))}
+                  className={`choice surface px-4 py-3 text-left ${tier === item.id ? "bg-primary text-primary-foreground" : ""}`}
+                >
+                  <dt className={`text-xs ${tier === item.id ? "text-primary-foreground/85" : "text-muted-foreground"}`}>
+                    <span aria-hidden="true">🌟 </span>
+                    {item.label} · 精选
+                    <span className="mt-0.5 block">{item.range}</span>
+                  </dt>
+                  <dd className="mt-1 text-2xl font-semibold tabular-nums tracking-tight">{formatNumber(counts[item.id])}</dd>
+                </button>
+              ))}
+            </dl>
+          </div>
           <p className="text-xs text-muted-foreground">
             共 {formatNumber(catalog.repos.length)} 个不少于 5,000 星的项目
             {catalog.coverage.reported != null ? `，GitHub 搜索报告约 ${formatNumber(catalog.coverage.reported)} 个` : ""}

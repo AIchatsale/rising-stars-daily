@@ -54,7 +54,7 @@ export function TrendChart({
               type="button"
               aria-pressed={active}
               onClick={() => onToggle(item.fullName)}
-              className={`shrink-0 rounded-full border px-3 py-1 text-xs ${active ? "border-transparent text-white" : "border-border bg-background text-foreground"}`}
+              className={`choice choice-pill choice-calm shrink-0 rounded-full border px-3 py-1 text-xs ${active ? "text-white" : "bg-background text-foreground"}`}
               style={active ? { background: colors[index % colors.length] } : undefined}
             >
               {item.fullName}

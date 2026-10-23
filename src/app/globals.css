@@ -151,3 +151,141 @@
     box-shadow: none;
   }
 }
+
+.choice {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  cursor: pointer;
+  border-color: color-mix(in oklch, var(--primary) 34%, var(--border));
+  box-shadow:
+    0 1px 2px rgb(23 35 59 / 5%),
+    0 12px 26px -22px color-mix(in oklch, var(--primary) 85%, transparent);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease,
+    background-color 180ms ease;
+}
+
+.choice::after {
+  content: "";
+  position: absolute;
+  inset: -30% auto -30% 0;
+  z-index: 1;
+  width: 46%;
+  pointer-events: none;
+  background: linear-gradient(
+    105deg,
+    transparent,
+    color-mix(in oklch, white 78%, var(--primary)) 46%,
+    transparent
+  );
+  opacity: 0.42;
+  transform: translateX(-190%) skewX(-16deg);
+  animation: choice-sheen 6.4s ease-in-out infinite;
+}
+
+.choice > * {
+  position: relative;
+  z-index: 2;
+}
+
+.choice:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in oklch, var(--primary) 72%, white);
+  box-shadow:
+    0 14px 28px -16px color-mix(in oklch, var(--primary) 82%, transparent),
+    0 0 18px -8px color-mix(in oklch, var(--primary) 58%, transparent);
+}
+
+.choice-pill:hover {
+  transform: translateY(-1px);
+}
+
+.choice:active {
+  transform: translateY(0) scale(0.98);
+}
+
+.choice[aria-pressed="true"],
+.choice[aria-current="location"] {
+  border-color: color-mix(in oklch, white 64%, var(--primary));
+  box-shadow:
+    0 0 0 1px color-mix(in oklch, white 42%, transparent),
+    0 16px 32px -14px color-mix(in oklch, var(--primary) 92%, transparent),
+    0 0 26px -6px color-mix(in oklch, var(--primary) 62%, transparent);
+}
+
+.choice[aria-pressed="true"]::after,
+.choice[aria-current="location"]::after {
+  opacity: 0.82;
+  background: linear-gradient(105deg, transparent, rgb(255 255 255 / 82%), transparent);
+}
+
+.choice:nth-child(2)::after { animation-delay: 0.5s; }
+.choice:nth-child(3)::after { animation-delay: 1s; }
+.choice:nth-child(4)::after { animation-delay: 1.5s; }
+.choice:nth-child(5)::after { animation-delay: 2s; }
+.choice:nth-child(6)::after { animation-delay: 2.5s; }
+.choice:nth-child(7)::after { animation-delay: 3s; }
+.choice:nth-child(8)::after { animation-delay: 3.5s; }
+
+.choice:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.choice-calm::after {
+  animation: none;
+  opacity: 0;
+}
+
+nav .choice {
+  border-color: transparent;
+  box-shadow: none;
+}
+
+.choice:disabled,
+.choice[aria-disabled="true"] {
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.choice:disabled::after,
+.choice[aria-disabled="true"]::after {
+  animation: none;
+  opacity: 0;
+}
+
+.dark .choice::after {
+  opacity: 0.3;
+}
+
+@keyframes choice-sheen {
+  0%,
+  64% {
+    transform: translateX(-190%) skewX(-16deg);
+  }
+  84%,
+  100% {
+    transform: translateX(430%) skewX(-16deg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .choice {
+    transition: border-color 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+  }
+
+  .choice::after {
+    animation: none;
+    opacity: 0;
+  }
+
+  .choice:hover,
+  .choice:active,
+  .choice-pill:hover {
+    transform: none;
+  }
+}
