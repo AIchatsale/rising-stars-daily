@@ -2,8 +2,6 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 import { LanguageDot } from "@/components/language-dot";
-import { SiteFooter } from "@/components/site-footer";
-import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -142,15 +140,13 @@ export function LibraryBrowser() {
   }
 
   return (
-    <div className="min-h-screen">
-    <SiteHeader current="library" />
-    <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 md:px-8 md:py-10">
+    <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 md:px-8 md:py-10">
       <header className="surface relative overflow-hidden px-6 py-8 md:px-8 md:py-10">
         <div className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-primary/10 blur-3xl" />
         <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
             <p className="text-[11px] font-semibold tracking-[0.2em] text-primary">PANDAWM · HIGH-STAR LIBRARY</p>
-            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-balance md:text-5xl">高星项目库</h1>
+            <h2 className="mt-3 text-3xl font-semibold tracking-tight text-balance md:text-5xl">高星项目库</h2>
             <p className="mt-3 text-sm leading-7 text-muted-foreground md:text-base">
               已经站稳的开源项目，按 5,000 星以上的档位看协议、活跃度和能不能拿去跟客户谈。周日全量补新仓库，其余日子更新已知星标。
             </p>
@@ -315,8 +311,6 @@ export function LibraryBrowser() {
           ) : null}
         </>
       ) : null}
-    </main>
-    <SiteFooter />
     </div>
   );
 }

@@ -12,3 +12,7 @@ export function siteHref(path: string): string {
   if (withSlash === "/") return prefix ? `${prefix}/` : "/";
   return `${prefix}${withSlash}`;
 }
+
+export function siteHash(id: string): string {
+  return `${siteHref("/")}#${id}`;
+}

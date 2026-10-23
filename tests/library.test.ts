@@ -24,7 +24,7 @@ import {
   toLibraryRepo,
   type LibraryRepo,
 } from "@/lib/library";
-import { siteHref } from "@/lib/site";
+import { siteHash, siteHref } from "@/lib/site";
 
 function repo(partial: Partial<LibraryRepo> & Pick<LibraryRepo, "fullName" | "stars">): LibraryRepo {
   return {
@@ -173,5 +173,6 @@ describe("high-star library", () => {
     expect(csv).toContain("acme/new");
     expect(csv).toContain("https://github.com/acme/new");
     expect(siteHref("/library/")).toBe("/library/");
+    expect(siteHash("library")).toBe("/#library");
   });
 });

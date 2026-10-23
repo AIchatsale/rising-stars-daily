@@ -1,4 +1,4 @@
-# 昇星日报
+# Github之星
 
 每天采集一批 GitHub 仓库，把星标记进仓库里的 JSON 快照，再和上一天对照，找出过去 24 小时涨得最快的开源项目。页面是给业务团队用的：除了增速榜，还有「今天建议带给客户」的三条简评，以及可以转发的 Markdown / JSON / HTML 日报。
 
@@ -18,13 +18,13 @@
 - 每日快照写在 `data/snapshots/`。有上一份同来源快照时，增量 = 今日星标 − 上次星标，增速 = 增量 / 上次星标。
 - 第一次没有昨日快照时：48 小时内新建的仓库按累计星标排名；Trending 页面上的旧仓库使用页面给出的「今日星标」；其余仓库先入榜但增量标成待对照。
 - 榜单按增量排序，不按百分比，避免很小的仓库因为翻倍挤到前面。
-- 中文看板：推荐卡片、话题和语言筛选、搜索、可排序表格、多日星标折线、按日期回看。
+- 中文看板：推荐卡片、话题和语言筛选、搜索、可排序表格、多日星标折线、按日期回看。高星项目库接在同一页下方，导航是页内锚点。
 - 每天写出 `data/digests/` 下的 Markdown、JSON、HTML。配了 SMTP 才会寄出 HTML。
 - 高星项目库：收集 5,000 星以上的仓库，按 5K / 10K / 20K / 40K 分档，标出协议、主页、组织账号、近期活跃和方向，并给一句中文商业用途说明。
 
 ## 高星项目库
 
-页面在 `/library/`，和昇星日报共用顶部导航。数据在 `data/library/catalog.json`，星标历史在 `data/library/history.json`。
+项目库在首页的 `#library`。`/library/` 会转到 `/#library`，旧链接还能用。数据在 `data/library/catalog.json`，星标历史在 `data/library/history.json`。名单要滚到这一段附近才开始下载，首页先把增速榜画出来。
 
 搜索要避开 GitHub「每个查询最多 1000 条」的限制，所以按星标区间切开；某个区间仍然超过 1000 条时，再按创建日期对半拆开。默认排除 fork 和已归档仓库。
 
@@ -143,9 +143,9 @@ npm run build
 4. 在 `pandawm.com` 的 DNS 添加一条 CNAME：主机名 `githubstars`，目标 `aichatsale.github.io`。
 5. Settings → Pages → Custom domain 填 `githubstars.pandawm.com`。证书签发后再勾选 Enforce HTTPS。构建产物根目录的 `CNAME` 也是这个域名，部署时会带上。
 6. 需要模型和邮件时，在 Settings → Secrets and variables → Actions 添加上一节的 Secrets。`GITHUB_TOKEN` 由 Actions 自动提供，用来读公开仓库和把数据推回默认分支，不要自己建一个同名 Secret。
-7. 在 Actions 里手动运行 **Rising Stars**，或等到每天 01:00 UTC。仓库里已经有一份高星项目库全量结果；只有想马上重搜时才勾选 **Full GitHub search for the high-star library**。不勾选时，周日会自动全量搜索，其他日子只更新星标。
+7. 推送到 `main` 会自动跑 **Pages**，用仓库里现成的数据发布界面。要更新星标，再手动运行 **Rising Stars**，或等到每天 01:00 UTC。仓库里已经有一份高星项目库全量结果；只有想马上重搜时才勾选 **Full GitHub search for the high-star library**。不勾选时，周日会自动全量搜索，其他日子只更新星标。
 
-工作流会：采集 → 把 `data/` 提交回仓库 → 按 `config.json` 的 `site` 构建静态页面 → 部署到 Pages。默认 `site.basePath` 为空，所以页面在域名根目录。邮件和 Markdown 里的链接默认是 `https://githubstars.pandawm.com/`。
+**Pages** 只构建和发布，不采集。**Rising Stars** 负责采集，把 `data/` 变基到最新的 `main` 再推回去，然后按当时的 `main` 构建发布。这样一次在旧提交上启动的采集，不会把后来的界面盖掉。Actions 用自带令牌推送数据时不会再触发 **Pages**，所以发布留在 **Rising Stars** 的最后一步。默认 `site.basePath` 为空，页面在域名根目录。邮件主题前缀是 `Github之星`，Markdown 里的链接默认是 `https://githubstars.pandawm.com/`。
 
 要临时换域名或加路径前缀，可以改 `config.json`，也可以在仓库 Variables 里设置 `PAGES_DOMAIN`、`BASE_PATH`、`PAGES_URL`。环境变量优先于配置文件。只有重新发布到 `https://aichatsale.github.io/rising-stars-daily/` 时，才把 `site.basePath` 设为 `/rising-stars-daily`，并去掉自定义域名。
 

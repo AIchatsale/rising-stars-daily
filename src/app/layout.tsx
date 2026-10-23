@@ -10,10 +10,28 @@ const geist = Geist({
 
 const pagesUrl = process.env.NEXT_PUBLIC_PAGES_URL || DEFAULT_PAGES_URL;
 
+const description = "熊猫出海给业务同事用的开源情报：每天找出涨得最快的 GitHub 项目，并按星标档位浏览可以拿去跟客户谈的仓库。";
+
 export const metadata: Metadata = {
   metadataBase: new URL(pagesUrl),
-  title: "昇星日报 · PandaWM",
-  description: "熊猫出海给业务同事用的开源情报：每天找出涨得最快的 GitHub 项目，并按星标档位浏览可以拿去跟客户谈的仓库。",
+  title: {
+    default: "Github之星 · PandaWM",
+    template: "%s · Github之星",
+  },
+  description,
+  openGraph: {
+    title: "Github之星 · PandaWM",
+    description,
+    siteName: "Github之星",
+    locale: "zh_CN",
+    type: "website",
+    url: pagesUrl,
+  },
+  twitter: {
+    card: "summary",
+    title: "Github之星 · PandaWM",
+    description,
+  },
 };
 
 const themeScript = `try{if(localStorage.getItem("pandawm-theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}`;

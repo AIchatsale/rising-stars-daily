@@ -84,7 +84,7 @@ export function parseConfig(raw: unknown): AppConfig {
       categories,
     },
     email: {
-      subjectPrefix: typeof email.subjectPrefix === "string" && email.subjectPrefix.trim() ? email.subjectPrefix.trim() : "昇星日报",
+      subjectPrefix: typeof email.subjectPrefix === "string" && email.subjectPrefix.trim() ? email.subjectPrefix.trim() : "Github之星",
       topInEmail: expectPositiveInt(email.topInEmail ?? 10, "email.topInEmail"),
     },
     site: resolvePagesHost(expectSite(raw.site)),

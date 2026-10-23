@@ -28,6 +28,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - uses: actions/setup-node@v4
         with:
@@ -74,8 +76,40 @@ jobs:
             echo "No data changes to commit"
           else
             git commit -m "chore: daily snapshot $(date -u +%F)"
-            git push
+            git fetch origin main
+            git rebase origin/main
+            git push origin HEAD:main
           fi
+
+  publish:
+    needs: collect
+    runs-on: ubuntu-latest
+    concurrency:
+      group: pages
+      cancel-in-progress: true
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+
+      - run: npm ci
+
+      - name: Resolve Pages paths
+        id: paths
+        env:
+          BASE_PATH: ${{ vars.BASE_PATH }}
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.BASE_PATH }}
+          PAGES_URL: ${{ vars.PAGES_URL }}
+          PAGES_DOMAIN: ${{ vars.PAGES_DOMAIN }}
+        run: npx tsx scripts/pages-paths.ts
 
       - name: Build dashboard
         env:
@@ -89,13 +123,6 @@ jobs:
         with:
           path: out
 
-  deploy:
-    needs: collect
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4

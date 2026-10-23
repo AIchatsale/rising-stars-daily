@@ -2,6 +2,7 @@
 
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
+import { LibraryGate } from "@/components/library-gate";
 import { Picks } from "@/components/picks";
 import { SiteFooter } from "@/components/site-footer";
 import { SiteHeader } from "@/components/site-header";
@@ -176,12 +177,13 @@ export function Dashboard() {
 
   return (
     <div className="min-h-screen">
-    <SiteHeader current="rising" />
-    <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-8 md:px-8 md:py-10">
+    <SiteHeader />
+    <main>
+    <section id="rising" className="mx-auto flex w-full max-w-6xl scroll-mt-20 flex-col gap-8 px-4 py-8 md:px-8 md:py-10">
       <header className="surface relative overflow-hidden px-6 py-8 md:px-8 md:py-10">
         <div className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-primary/10 blur-3xl" />
         <p className="text-[11px] font-semibold tracking-[0.2em] text-primary">PANDAWM · RISING STARS</p>
-        <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-balance md:text-5xl">今天值得带给客户的开源项目</h1>
+        <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-balance md:text-5xl">Github之星</h1>
         <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground md:text-base">
           把过去 24 小时涨得最快的 GitHub 项目，整理成熊猫出海业务同事能直接拿去谈的名单。星标、增速和话题都按同一套口径排好。
         </p>
@@ -408,6 +410,8 @@ export function Dashboard() {
           </div>
         </>
       ) : null}
+    </section>
+    <LibraryGate />
     </main>
     <SiteFooter />
     </div>

@@ -62,7 +62,7 @@
     "categories": ["应用", "工具", "库", "框架", "模板", "插件", "文档", "示例", "集成", "研究"]
   },
   "email": {
-    "subjectPrefix": "昇星日报",
+    "subjectPrefix": "Github之星",
     "topInEmail": 10
   },
   "site": {

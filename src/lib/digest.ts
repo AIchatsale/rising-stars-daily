@@ -79,7 +79,7 @@ export function renderDigestJson(report: DayReport): DigestJson {
 
 export function renderDigestMarkdown(report: DayReport, pageUrl?: string): string {
   const lines: string[] = [
-    `# 昇星日报 ${formatDate(report.date)}`,
+    `# Github之星 ${formatDate(report.date)}`,
     "",
     report.source === "sample"
       ? "数据来源：示例快照。星标走势是演示序列，不是这些仓库的真实历史。"
@@ -126,7 +126,7 @@ export function renderDigestMarkdown(report: DayReport, pageUrl?: string): strin
     lines.push("");
   }
   lines.push("---", "");
-  lines.push("本简报由昇星日报自动生成，可转发给同事。星标增量来自相邻快照的差值；首次采集日会单独标明。");
+  lines.push("本简报由 Github之星自动生成，可转发给同事。星标增量来自相邻快照的差值；首次采集日会单独标明。");
   if (pageUrl) lines.push(`完整看板：${pageUrl}`);
   lines.push("");
   return lines.join("\n");
@@ -176,12 +176,12 @@ export function renderDigestHtml(report: DayReport, options?: { pageUrl?: string
 <html lang="zh-CN">
 <head>
   <meta charset="utf-8" />
-  <title>昇星日报 ${escapeHtml(formatDate(report.date))}</title>
+  <title>Github之星 ${escapeHtml(formatDate(report.date))}</title>
 </head>
 <body style="margin:0;padding:24px;background:#f4efe6;color:#1c1915;font-family:'Segoe UI','PingFang SC','Noto Sans SC',sans-serif;">
   <div style="max-width:680px;margin:0 auto;">
     <p style="margin:0;font-size:12px;letter-spacing:0.16em;color:#8a6a2f;">RISING STARS</p>
-    <h1 style="font-family:Georgia,'Songti SC',serif;font-weight:500;font-size:32px;margin:6px 0 8px;">昇星日报</h1>
+    <h1 style="font-family:Georgia,'Songti SC',serif;font-weight:500;font-size:32px;margin:6px 0 8px;">Github之星</h1>
     <p style="margin:0 0 18px;color:#6e675e;">${escapeHtml(formatDate(report.date))} · ${escapeHtml(report.phrase)}</p>
     <h2 style="font-size:18px;margin:0 0 10px;">今日建议带给客户</h2>
     ${picks || "<p>今天没有足够的候选。</p>"}

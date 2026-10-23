@@ -78,6 +78,8 @@ describe("classification, digest, and optional delivery", () => {
     const markdown = renderDigestMarkdown(report, "https://example.test/rising/");
     const html = renderDigestHtml(report);
     const json = renderDigestJson(report);
+    expect(markdown).toContain("# Github之星");
+    expect(html).toContain("<title>Github之星");
     expect(markdown).toContain("## 今日建议带给客户");
     expect(markdown).toContain("acme/desk");
     expect(markdown).toContain("https://example.test/rising/");

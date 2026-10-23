@@ -1,11 +1,21 @@
 import type { Metadata } from "next";
-import { LibraryBrowser } from "@/components/library-browser";
+import { siteHash } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: "高星项目库 · PandaWM",
-  description: "按星标档位浏览 5,000 星以上的开源项目，并标出协议、活跃度和可能的商业用途。",
+  title: { absolute: "高星项目库 · PandaWM" },
+  description: "高星项目库已经并入首页。这个地址会打开首页的项目库一节。",
 };
 
 export default function LibraryPage() {
-  return <LibraryBrowser />;
+  const href = siteHash("library");
+  return (
+    <main className="mx-auto flex min-h-screen max-w-6xl flex-col gap-3 px-4 py-16 md:px-8">
+      <script dangerouslySetInnerHTML={{ __html: `location.replace(${JSON.stringify(href)})` }} />
+      <h1 className="text-2xl font-semibold tracking-tight">高星项目库</h1>
+      <p className="text-sm leading-6 text-muted-foreground">这一节现在在首页下方。正在打开。</p>
+      <a className="text-sm font-medium text-primary" href={href}>
+        打开首页的高星项目库
+      </a>
+    </main>
+  );
 }
