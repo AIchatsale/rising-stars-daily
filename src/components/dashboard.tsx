@@ -3,7 +3,8 @@
 import dynamic from "next/dynamic";
 import { useEffect, useMemo, useState } from "react";
 import { Picks } from "@/components/picks";
-import { SiteNav } from "@/components/site-nav";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { RankingTable, type SortKey } from "@/components/ranking-table";
 import { RisingCard } from "@/components/rising-card";
 import { Badge } from "@/components/ui/badge";
@@ -174,17 +175,17 @@ export function Dashboard() {
         : `对照上一份实测快照。增量 = 今日星标 − 上次星标。${report.approximate24h ? "间隔大约 24 小时。" : `间隔不是正好一天：${report.phrase}。`}`;
 
   return (
+    <div className="min-h-screen">
+    <SiteHeader current="rising" />
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-8 px-4 py-8 md:px-8 md:py-10">
-      <header className="flex flex-col gap-6 border-b border-border pb-6 md:flex-row md:items-end md:justify-between">
-        <div className="max-w-2xl">
-          <SiteNav current="rising" />
-          <p className="mt-4 font-heading text-xs tracking-[0.22em] text-primary">RISING STARS</p>
-          <h1 className="mt-1 font-heading text-4xl tracking-tight md:text-5xl">昇星日报</h1>
-          <p className="mt-3 text-sm leading-6 text-muted-foreground">
-            过去 24 小时里星标涨得最快的开源项目。给每天要向客户推荐方案的团队，用来找值得跟进的机会。
-          </p>
-        </div>
-        <div className="flex flex-wrap gap-2">
+      <header className="surface relative overflow-hidden px-6 py-8 md:px-8 md:py-10">
+        <div className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-primary/10 blur-3xl" />
+        <p className="text-[11px] font-semibold tracking-[0.2em] text-primary">PANDAWM · RISING STARS</p>
+        <h1 className="mt-3 max-w-3xl text-3xl font-semibold tracking-tight text-balance md:text-5xl">今天值得带给客户的开源项目</h1>
+        <p className="mt-3 max-w-2xl text-sm leading-7 text-muted-foreground md:text-base">
+          把过去 24 小时涨得最快的 GitHub 项目，整理成熊猫出海业务同事能直接拿去谈的名单。星标、增速和话题都按同一套口径排好。
+        </p>
+        <div className="mt-6 flex flex-wrap gap-2">
           <Button variant="outline" disabled={!date} onClick={() => void copyDigest()}>
             复制简报
           </Button>
@@ -209,13 +210,13 @@ export function Dashboard() {
       {loading ? (
         <div className="grid gap-3 md:grid-cols-3">
           {Array.from({ length: 3 }, (_, index) => (
-            <div key={index} className="h-40 animate-pulse rounded-xl bg-muted" />
+            <div key={index} className="surface h-40 animate-pulse bg-muted" />
           ))}
         </div>
       ) : null}
 
       {error ? (
-        <div className="rounded-xl border border-destructive/30 bg-card px-4 py-5 text-sm">
+        <div className="surface border-destructive/30 px-4 py-5 text-sm">
           <p className="font-medium">看板暂时读不到数据</p>
           <p className="mt-1 text-muted-foreground">{error}</p>
         </div>
@@ -225,7 +226,7 @@ export function Dashboard() {
         <>
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between gap-3">
-              <h2 className="font-heading text-xl">{formatDate(date)}</h2>
+              <h2 className="text-xl font-semibold tracking-tight">{formatDate(date)}</h2>
               <div className="flex gap-2">
                 <Button variant="outline" size="sm" onClick={() => shiftDate(-1)} disabled={index.dates[0] === date}>
                   前一天
@@ -245,7 +246,7 @@ export function Dashboard() {
                     type="button"
                     aria-pressed={active}
                     onClick={() => setDate(item)}
-                    className={`shrink-0 rounded-full border px-3 py-1.5 text-left text-xs ${active ? "border-transparent bg-primary text-primary-foreground" : "border-border bg-card"}`}
+                    className={`shrink-0 rounded-full border px-3 py-1.5 text-left text-xs shadow-sm ${active ? "border-transparent bg-primary text-primary-foreground" : "border-border bg-card hover:border-primary/30"}`}
                   >
                     <span className="block font-medium">{formatShortDate(item)}</span>
                     <span className={active ? "text-primary-foreground/80" : "text-muted-foreground"}>
@@ -257,7 +258,7 @@ export function Dashboard() {
             </div>
           </div>
 
-          <p className="rounded-xl bg-secondary px-4 py-3 text-sm leading-6">{banner}</p>
+          <p className="surface bg-secondary/70 px-4 py-3 text-sm leading-6 shadow-none">{banner}</p>
 
           <dl className="grid grid-cols-2 gap-3 md:grid-cols-4">
             {[
@@ -266,9 +267,9 @@ export function Dashboard() {
               ["最大增量", formatDelta(report.stats.maxDelta)],
               ["中位增速", formatPercent(report.stats.medianGrowth)],
             ].map(([label, value]) => (
-              <div key={label} className="rounded-xl border bg-card px-4 py-3">
+              <div key={label} className="surface px-4 py-3">
                 <dt className="text-xs text-muted-foreground">{label}</dt>
-                <dd className="mt-1 font-heading text-2xl tabular-nums">{value}</dd>
+                <dd className="mt-1 text-2xl font-semibold tabular-nums tracking-tight">{value}</dd>
               </div>
             ))}
           </dl>
@@ -283,7 +284,7 @@ export function Dashboard() {
 
           {report.topicLeaders.length > 0 ? (
             <section className="space-y-3">
-              <h2 className="font-heading text-2xl">各话题里今天最快</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">各话题里今天最快</h2>
               <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
                 {report.topicLeaders.map((leader) => {
                   const repo = report.items.find((item) => item.fullName === leader.fullName);
@@ -292,7 +293,7 @@ export function Dashboard() {
                       key={leader.topicId}
                       type="button"
                       onClick={() => setTopic(leader.topicId)}
-                      className="rounded-xl border bg-card px-3 py-3 text-left hover:border-primary"
+                      className="surface px-3 py-3 text-left transition hover:border-primary/40"
                     >
                       <p className="text-xs text-muted-foreground">{leader.label}</p>
                       <p className="mt-1 truncate text-sm font-medium">{leader.fullName}</p>
@@ -304,7 +305,7 @@ export function Dashboard() {
             </section>
           ) : null}
 
-          <section className="sticky top-0 z-20 -mx-4 space-y-3 border-y bg-background/95 px-4 py-3 backdrop-blur md:mx-0 md:rounded-xl md:border md:px-4">
+          <section className="surface sticky top-16 z-30 space-y-3 bg-background/90 p-3 backdrop-blur-xl">
             <div className="flex flex-col gap-3 md:flex-row md:items-end">
               <label className="flex min-w-40 flex-col gap-1 text-xs text-muted-foreground">
                 语言
@@ -346,11 +347,11 @@ export function Dashboard() {
 
           <section className="space-y-3">
             <div className="flex items-end justify-between gap-3">
-              <h2 className="font-heading text-2xl">增速榜</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">增速榜</h2>
               <Badge variant="outline">{filtered.length} 个项目</Badge>
             </div>
             {filtered.length === 0 ? (
-              <p className="rounded-xl border border-dashed px-4 py-8 text-sm text-muted-foreground">没有符合当前语言、话题或搜索的项目。</p>
+              <p className="surface border-dashed px-4 py-10 text-center text-sm text-muted-foreground">没有符合当前语言、话题或搜索的项目。</p>
             ) : (
               <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
                 {filtered.slice(0, 6).map((repo) => (
@@ -367,7 +368,7 @@ export function Dashboard() {
 
           <section className="space-y-3">
             <div>
-              <h2 className="font-heading text-2xl">星标趋势</h2>
+              <h2 className="text-2xl font-semibold tracking-tight">星标趋势</h2>
               <p className="text-sm text-muted-foreground">线条来自每日快照，最多同时看 6 个仓库。示例和实测不会连成一条线。</p>
             </div>
             <TrendChart
@@ -384,8 +385,9 @@ export function Dashboard() {
           </section>
 
           <section className="space-y-3">
-            <h2 className="font-heading text-2xl">完整排名</h2>
+            <h2 className="text-2xl font-semibold tracking-tight">完整排名</h2>
             {sorted.length === 0 ? null : (
+              <div className="surface overflow-hidden">
               <RankingTable
                 items={sorted}
                 sortKey={sortKey}
@@ -393,18 +395,21 @@ export function Dashboard() {
                 approximate24h={report.approximate24h}
                 onSort={onSort}
               />
+              </div>
             )}
           </section>
 
-          <footer className="space-y-2 border-t pt-4 text-sm leading-6 text-muted-foreground">
+          <div className="space-y-2 text-sm leading-6 text-muted-foreground">
             <p>
               排名按星标增量，而不是百分比，避免个位数仓库因为翻倍占据榜首。百分比只在有昨日星标时计算。
               {report.items[0] ? ` 榜首增量的口径是「${deltaCaption(report.items[0].deltaSource, report.approximate24h)}」。` : ""}
             </p>
             <p>每日简报同时写成 Markdown、JSON 和 HTML。配置 SMTP 后工作流会把 HTML 寄出；没有密钥时只保存文件。</p>
-          </footer>
+          </div>
         </>
       ) : null}
     </main>
+    <SiteFooter />
+    </div>
   );
 }

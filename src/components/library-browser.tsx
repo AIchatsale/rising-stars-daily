@@ -1,7 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
-import { SiteNav } from "@/components/site-nav";
+import { LanguageDot } from "@/components/language-dot";
+import { SiteFooter } from "@/components/site-footer";
+import { SiteHeader } from "@/components/site-header";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -28,7 +30,7 @@ import {
 } from "@/lib/library";
 import { dataUrl } from "@/lib/site";
 
-const ROW_HEIGHT = 148;
+const ROW_HEIGHT = 188;
 const PAGE_SIZE = 40;
 
 function download(filename: string, content: string, type: string) {
@@ -140,31 +142,39 @@ export function LibraryBrowser() {
   }
 
   return (
+    <div className="min-h-screen">
+    <SiteHeader current="library" />
     <main className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-4 py-8 md:px-8 md:py-10">
-      <header className="flex flex-col gap-4 border-b border-border pb-6">
-        <SiteNav current="library" />
-        <div className="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <header className="surface relative overflow-hidden px-6 py-8 md:px-8 md:py-10">
+        <div className="pointer-events-none absolute -right-16 -top-20 size-56 rounded-full bg-primary/10 blur-3xl" />
+        <div className="flex flex-col gap-6 md:flex-row md:items-end md:justify-between">
           <div className="max-w-2xl">
-            <p className="font-heading text-xs tracking-[0.22em] text-primary">HIGH-STAR LIBRARY</p>
-            <h1 className="mt-1 font-heading text-4xl tracking-tight md:text-5xl">高星项目库</h1>
-            <p className="mt-3 text-sm leading-6 text-muted-foreground">
-              给业务同事浏览已经站稳的开源项目。按星标档位看协议、是否还在更新，以及能不能拿去跟客户谈。每周日全量搜索补新仓库，其余日子更新已知项目的星标。
+            <p className="text-[11px] font-semibold tracking-[0.2em] text-primary">PANDAWM · HIGH-STAR LIBRARY</p>
+            <h1 className="mt-3 text-3xl font-semibold tracking-tight text-balance md:text-5xl">高星项目库</h1>
+            <p className="mt-3 text-sm leading-7 text-muted-foreground md:text-base">
+              已经站稳的开源项目，按 5,000 星以上的档位看协议、活跃度和能不能拿去跟客户谈。周日全量补新仓库，其余日子更新已知星标。
             </p>
           </div>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex shrink-0 flex-wrap gap-2">
             <Button variant="outline" disabled={filtered.length === 0} onClick={() => exportFiltered("csv")}>
               导出 CSV
             </Button>
-            <Button variant="outline" disabled={filtered.length === 0} onClick={() => exportFiltered("json")}>
+            <Button variant="default" disabled={filtered.length === 0} onClick={() => exportFiltered("json")}>
               导出 JSON
             </Button>
           </div>
         </div>
       </header>
 
-      {loading ? <div className="h-40 animate-pulse rounded-xl bg-muted" /> : null}
+      {loading ? (
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-4">
+          {Array.from({ length: 4 }, (_, index) => (
+            <div key={index} className="surface h-24 animate-pulse bg-muted" />
+          ))}
+        </div>
+      ) : null}
       {error ? (
-        <div className="rounded-xl border border-destructive/30 bg-card px-4 py-5 text-sm">
+        <div className="surface border-destructive/30 px-4 py-5 text-sm">
           <p className="font-medium">项目库暂时读不到数据</p>
           <p className="mt-1 text-muted-foreground">{error}</p>
         </div>
@@ -179,10 +189,10 @@ export function LibraryBrowser() {
                 type="button"
                 aria-pressed={tier === item.id}
                 onClick={() => setTier((current) => (current === item.id ? "all" : item.id))}
-                className={`rounded-xl border px-4 py-3 text-left ${tier === item.id ? "border-transparent bg-primary text-primary-foreground" : "bg-card"}`}
+                className={`surface px-4 py-3 text-left transition ${tier === item.id ? "border-transparent bg-primary text-primary-foreground shadow-none" : "hover:border-primary/40"}`}
               >
-                <dt className="text-xs opacity-80">{item.label} · {item.range}</dt>
-                <dd className="mt-1 font-heading text-2xl tabular-nums">{formatNumber(counts[item.id])}</dd>
+                <dt className={`text-xs ${tier === item.id ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{item.label} · {item.range}</dt>
+                <dd className="mt-1 text-2xl font-semibold tabular-nums tracking-tight">{formatNumber(counts[item.id])}</dd>
               </button>
             ))}
           </dl>
@@ -194,7 +204,7 @@ export function LibraryBrowser() {
             。7 日和 30 日增量要等历史点攒够才显示。
           </p>
 
-          <div className="sticky top-0 z-20 space-y-3 rounded-xl border bg-background/95 p-3 backdrop-blur">
+          <div className="surface sticky top-16 z-30 space-y-3 bg-background/90 p-3 backdrop-blur-xl">
             <div className="grid gap-3 md:grid-cols-[minmax(0,1.4fr)_repeat(4,minmax(0,0.8fr))]">
               <Input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="搜索项目、作者、简介、话题" aria-label="搜索项目" />
               <Select value={language} onValueChange={(value) => { if (typeof value === "string") setLanguage(value); }}>
@@ -247,11 +257,11 @@ export function LibraryBrowser() {
             </div>
           </div>
 
-          {pageRows.length === 0 ? <p className="rounded-xl border bg-card px-4 py-6 text-sm text-muted-foreground">没有符合筛选的项目。</p> : null}
+          {pageRows.length === 0 ? <p className="surface border-dashed px-4 py-10 text-center text-sm text-muted-foreground">没有符合筛选的项目。</p> : null}
           {pageRows.length > 0 ? (
             <div
               ref={scroller}
-              className="max-h-[70vh] overflow-auto rounded-xl border bg-card"
+              className="surface max-h-[70vh] overflow-auto"
               onScroll={(event) => setScrollTop(event.currentTarget.scrollTop)}
             >
               <div style={{ height: pageRows.length * ROW_HEIGHT, position: "relative" }}>
@@ -261,34 +271,40 @@ export function LibraryBrowser() {
                   const growth7 = starGrowth(history.series[repo.fullName], asOf, 7, repo.stars);
                   const growth30 = starGrowth(history.series[repo.fullName], asOf, 30, repo.stars);
                   return (
-                    <article
+                      <article
                       key={repo.fullName}
-                      className="absolute inset-x-0 grid gap-2 overflow-hidden border-b px-4 py-3 md:grid-cols-[minmax(0,1fr)_8.5rem]"
+                      className="absolute inset-x-0 grid gap-2 overflow-hidden border-b border-border/80 px-4 py-3 md:grid-cols-[minmax(0,1fr)_9.5rem]"
                       style={{ top: rowIndex * ROW_HEIGHT, height: ROW_HEIGHT }}
                     >
                       <div className="min-w-0">
                         <div className="flex flex-wrap items-baseline gap-x-2">
-                          <a href={`https://github.com/${repo.fullName}`} target="_blank" rel="noreferrer" className="truncate font-medium hover:text-primary">
+                          <a href={`https://github.com/${repo.fullName}`} target="_blank" rel="noreferrer" className="truncate font-semibold tracking-tight hover:text-primary">
                             {name} <span className="font-normal text-muted-foreground">/ {owner}</span>
                           </a>
-                          <span className="text-xs text-muted-foreground">{repo.ownerType === "org" ? "组织" : "个人"}</span>
+                          <span className="text-[11px] text-muted-foreground">{repo.ownerType === "org" ? "组织" : "个人"}</span>
                         </div>
                         <p className="mt-1 line-clamp-1 text-sm text-muted-foreground">{repo.description || "没有简介"}</p>
-                        <div className="mt-2 flex flex-wrap gap-1">
+                        <div className="mt-2 flex flex-wrap items-center gap-1.5">
+                          <LanguageDot language={repo.language} />
                           {signalLabels(repo, asOf, withinDays).map((label) => <Badge key={label} variant="secondary">{label}</Badge>)}
                           {matchLibraryCategories(repo).map((item) => <Badge key={item.id} variant="outline">{item.label}</Badge>)}
                           {repo.homepage ? <a className="text-xs text-primary underline-offset-2 hover:underline" href={repo.homepage} target="_blank" rel="noreferrer">主页</a> : null}
                         </div>
-                        <p className="mt-2 line-clamp-2 text-xs leading-5 text-muted-foreground">{repo.note}</p>
+                        <p className="mt-1.5 line-clamp-2 text-xs leading-5 text-muted-foreground">{repo.note}</p>
                       </div>
-                      <dl className="grid grid-cols-2 gap-x-3 text-xs md:grid-cols-1">
-                        <div><dt className="text-muted-foreground">星标</dt><dd className="tabular-nums">{formatNumber(repo.stars)}</dd></div>
+                      <dl className="grid grid-cols-2 gap-x-3 text-xs md:grid-cols-1 md:text-right">
+                        <div><dt className="text-muted-foreground">星标</dt><dd className="font-medium tabular-nums">{formatNumber(repo.stars)}</dd></div>
                         <div><dt className="text-muted-foreground">Fork</dt><dd className="tabular-nums">{formatNumber(repo.forks)}</dd></div>
-                        <div><dt className="text-muted-foreground">近 7 日</dt><dd className="tabular-nums">{formatDelta(growth7)}</dd></div>
-                        <div><dt className="text-muted-foreground">近 30 日</dt><dd className="tabular-nums">{formatDelta(growth30)}</dd></div>
-                        <div className="col-span-2 md:col-span-1">
-                          <dt className="text-muted-foreground">{repo.language || "语言未知"} · {repo.license || licenseLabel(licenseKind(repo.license))}</dt>
-                          <dd className="truncate">创建 {formatDate(repo.createdAt)} · 推送 {formatDate(repo.pushedAt)}</dd>
+                        <div>
+                          <dt className="text-muted-foreground">近 7 日</dt>
+                          <dd className={`tabular-nums ${growth7 != null && growth7 > 0 ? "font-medium text-emerald-700 dark:text-emerald-300" : ""}`}>{formatDelta(growth7)}</dd>
+                        </div>
+                        <div>
+                          <dt className="text-muted-foreground">近 30 日</dt>
+                          <dd className={`tabular-nums ${growth30 != null && growth30 > 0 ? "font-medium text-emerald-700 dark:text-emerald-300" : ""}`}>{formatDelta(growth30)}</dd>
+                        </div>
+                        <div className="col-span-2 truncate text-muted-foreground md:col-span-1">
+                          {repo.license || licenseLabel(licenseKind(repo.license))} · 创建 {formatDate(repo.createdAt)} · 推送 {formatDate(repo.pushedAt)}
                         </div>
                       </dl>
                     </article>
@@ -300,5 +316,7 @@ export function LibraryBrowser() {
         </>
       ) : null}
     </main>
+    <SiteFooter />
+    </div>
   );
 }

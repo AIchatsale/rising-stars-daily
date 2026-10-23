@@ -1,5 +1,6 @@
 "use client";
 
+import { LanguageDot } from "@/components/language-dot";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { deltaCaption, formatDate, formatDelta, formatNumber, formatPercent } from "@/lib/format";
 import type { RankedRepo } from "@/lib/types";
@@ -61,10 +62,10 @@ export function RankingTable({
               </a>
               <div className="max-w-sm truncate text-xs text-muted-foreground">{item.classification.category}</div>
             </TableCell>
-            <TableCell>{item.language ?? "—"}</TableCell>
+            <TableCell>{item.language ? <LanguageDot language={item.language} /> : "—"}</TableCell>
             <TableCell className="text-right tabular-nums">{formatNumber(item.stars)}</TableCell>
-            <TableCell className="text-right tabular-nums text-primary">
-              {formatDelta(item.delta)}
+            <TableCell className="text-right tabular-nums">
+              <span className={item.delta != null && item.delta > 0 ? "font-medium text-emerald-700 dark:text-emerald-300" : undefined}>{formatDelta(item.delta)}</span>
               <div className="text-xs font-normal text-muted-foreground">{deltaCaption(item.deltaSource, approximate24h)}</div>
             </TableCell>
             <TableCell className="text-right tabular-nums">{formatPercent(item.growthPercent)}</TableCell>

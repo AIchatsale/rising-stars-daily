@@ -1,12 +1,7 @@
 import type { Metadata } from "next";
-import { Fraunces, Geist } from "next/font/google";
+import { Geist } from "next/font/google";
 import { DEFAULT_PAGES_URL } from "@/lib/pages-host";
 import "./globals.css";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-display",
-});
 
 const geist = Geist({
   subsets: ["latin"],
@@ -17,9 +12,11 @@ const pagesUrl = process.env.NEXT_PUBLIC_PAGES_URL || DEFAULT_PAGES_URL;
 
 export const metadata: Metadata = {
   metadataBase: new URL(pagesUrl),
-  title: "昇星日报",
-  description: "每日对照 GitHub 星标快照，找出过去 24 小时增速最快的开源项目，供业务团队筛选可以带给客户的机会。",
+  title: "昇星日报 · PandaWM",
+  description: "熊猫出海给业务同事用的开源情报：每天找出涨得最快的 GitHub 项目，并按星标档位浏览可以拿去跟客户谈的仓库。",
 };
+
+const themeScript = `try{if(localStorage.getItem("pandawm-theme")==="dark")document.documentElement.classList.add("dark")}catch(e){}`;
 
 export default function RootLayout({
   children,
@@ -27,8 +24,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="zh-CN" className={`${fraunces.variable} ${geist.variable}`}>
-      <body className="min-h-screen antialiased">{children}</body>
+    <html lang="zh-CN" className={geist.variable} suppressHydrationWarning>
+      <body className="min-h-screen antialiased">
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        {children}
+      </body>
     </html>
   );
 }
