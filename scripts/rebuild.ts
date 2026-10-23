@@ -13,6 +13,7 @@ import type {
   IndexFile,
   Snapshot,
 } from "../src/lib/types";
+import { resolvePagesHost } from "../src/lib/pages-host";
 import { sendHtmlEmail, smtpSettingsFromEnv } from "./email";
 import { readJson, repoRoot, writeJson } from "./paths";
 
@@ -94,7 +95,7 @@ export async function rebuild(options: RebuildOptions = {}): Promise<void> {
   const snapshots = readSnapshots();
   const existing = readRankings();
   const reports: DayReport[] = [];
-  const pageUrl = process.env.PAGES_URL?.trim() || undefined;
+  const pageUrl = resolvePagesHost(readJson<{ site?: unknown }>(path.join(repoRoot, "config.json")).site, process.env).url;
 
   for (const source of ["sample", "live"] as const) {
     const days = snapshots.filter((snapshot) => snapshot.source === source).sort((a, b) => a.date.localeCompare(b.date));

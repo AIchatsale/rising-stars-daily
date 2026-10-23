@@ -1,4 +1,4 @@
-export const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
+export const basePath = (process.env.NEXT_PUBLIC_BASE_PATH ?? "").replace(/\/+$/, "");
 
 export function dataUrl(file: string): string {
   const prefix = basePath.endsWith("/") ? basePath.slice(0, -1) : basePath;

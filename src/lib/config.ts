@@ -1,3 +1,4 @@
+import { resolvePagesHost } from "./pages-host";
 import type { AppConfig, TopicConfig } from "./types";
 
 function isRecord(value: unknown): value is Record<string, unknown> {
@@ -15,6 +16,12 @@ function expectPositiveInt(value: unknown, label: string): number {
   if (typeof value !== "number" || !Number.isInteger(value) || value <= 0) {
     throw new Error(`${label} must be a positive integer`);
   }
+  return value;
+}
+
+function expectSite(value: unknown): unknown {
+  if (value == null) return undefined;
+  if (!isRecord(value)) throw new Error("site must be an object");
   return value;
 }
 
@@ -80,6 +87,7 @@ export function parseConfig(raw: unknown): AppConfig {
       subjectPrefix: typeof email.subjectPrefix === "string" && email.subjectPrefix.trim() ? email.subjectPrefix.trim() : "昇星日报",
       topInEmail: expectPositiveInt(email.topInEmail ?? 10, "email.topInEmail"),
     },
+    site: resolvePagesHost(expectSite(raw.site)),
     recommendCount: expectPositiveInt(raw.recommendCount ?? 3, "recommendCount"),
   };
 }

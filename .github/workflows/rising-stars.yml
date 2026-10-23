@@ -30,20 +30,16 @@ jobs:
           node-version: 22
           cache: npm
 
+      - run: npm ci
+
       - name: Resolve Pages paths
         id: paths
-        run: |
-          owner="${GITHUB_REPOSITORY_OWNER}"
-          repo="${GITHUB_REPOSITORY#*/}"
-          if [ "$repo" = "${owner}.github.io" ]; then
-            echo "base_path=" >> "$GITHUB_OUTPUT"
-            echo "pages_url=https://${owner}.github.io/" >> "$GITHUB_OUTPUT"
-          else
-            echo "base_path=/${repo}" >> "$GITHUB_OUTPUT"
-            echo "pages_url=https://${owner}.github.io/${repo}/" >> "$GITHUB_OUTPUT"
-          fi
-
-      - run: npm ci
+        env:
+          BASE_PATH: ${{ vars.BASE_PATH }}
+          NEXT_PUBLIC_BASE_PATH: ${{ vars.BASE_PATH }}
+          PAGES_URL: ${{ vars.PAGES_URL }}
+          PAGES_DOMAIN: ${{ vars.PAGES_DOMAIN }}
+        run: npx tsx scripts/pages-paths.ts
 
       - name: Collect repositories and rank growth
         env:
@@ -58,6 +54,9 @@ jobs:
           SMTP_FROM: ${{ secrets.SMTP_FROM }}
           EMAIL_TO: ${{ secrets.EMAIL_TO }}
           SKIP_EMAIL: ${{ github.event_name == 'workflow_dispatch' && inputs.skip_email && 'true' || 'false' }}
+          PAGES_DOMAIN: ${{ steps.paths.outputs.pages_domain }}
+          BASE_PATH: ${{ steps.paths.outputs.base_path }}
+          NEXT_PUBLIC_BASE_PATH: ${{ steps.paths.outputs.base_path }}
           PAGES_URL: ${{ steps.paths.outputs.pages_url }}
         run: npm run collect
 
@@ -75,8 +74,10 @@ jobs:
 
       - name: Build dashboard
         env:
+          PAGES_DOMAIN: ${{ steps.paths.outputs.pages_domain }}
           BASE_PATH: ${{ steps.paths.outputs.base_path }}
           NEXT_PUBLIC_BASE_PATH: ${{ steps.paths.outputs.base_path }}
+          PAGES_URL: ${{ steps.paths.outputs.pages_url }}
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

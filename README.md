@@ -66,6 +66,9 @@ npm run build
 | `llm.maxRepos` / `llm.categories` | 模型最多概括多少个上榜项目，以及允许的分类 |
 | `email.topInEmail` | 邮件里的榜单长度。页面上的 HTML 文件仍包含完整上榜名单 |
 | `discover.githubTrending` | 设为 `false` 就不再请求 Trending 页面 |
+| `site.domain` | Pages 自定义域名，默认 `githubstars.pandawm.com`。构建时写入产物里的 `CNAME` |
+| `site.basePath` | 资源前缀。自定义域名根路径留空；只有发布到 `username.github.io/仓库名/` 时才写成 `/仓库名` |
+| `site.url` | 可选。邮件和 Markdown 里的看板链接。不填则由域名和 `basePath` 拼出来 |
 
 话题示例：
 
@@ -107,13 +110,19 @@ npm run build
 
 ## 部署到 GitHub
 
+看板给客户看的地址是 **https://githubstars.pandawm.com/**。静态资源和数据都在这个域名的根路径，不会再加 `/rising-stars-daily/`。
+
 1. 把这个仓库推到 GitHub。
 2. 打开 Actions，允许工作流。若默认分支有保护，需要允许 GitHub Actions 推送，否则快照提交会失败。
 3. Settings → Pages → Build and deployment，Source 选 **GitHub Actions**。
-4. 需要模型和邮件时，在 Settings → Secrets and variables → Actions 添加上一节的 Secrets。`GITHUB_TOKEN` 由 Actions 自动提供，用来读公开仓库和把数据推回默认分支，不要自己建一个同名 Secret。
-5. 在 Actions 里手动运行 **Rising Stars**，或等到每天 01:00 UTC。
+4. 在 `pandawm.com` 的 DNS 添加一条 CNAME：主机名 `githubstars`，目标 `aichatsale.github.io`。
+5. Settings → Pages → Custom domain 填 `githubstars.pandawm.com`。证书签发后再勾选 Enforce HTTPS。构建产物根目录的 `CNAME` 也是这个域名，部署时会带上。
+6. 需要模型和邮件时，在 Settings → Secrets and variables → Actions 添加上一节的 Secrets。`GITHUB_TOKEN` 由 Actions 自动提供，用来读公开仓库和把数据推回默认分支，不要自己建一个同名 Secret。
+7. 在 Actions 里手动运行 **Rising Stars**，或等到每天 01:00 UTC。
 
-工作流会：采集 → 把 `data/` 提交回仓库 → 构建静态页面 → 部署到 Pages。项目页的地址是 `https://<用户名>.github.io/<仓库名>/`。如果仓库名是 `<用户名>.github.io`，页面在站点根目录。
+工作流会：采集 → 把 `data/` 提交回仓库 → 按 `config.json` 的 `site` 构建静态页面 → 部署到 Pages。默认 `site.basePath` 为空，所以页面在域名根目录。邮件和 Markdown 里的链接默认是 `https://githubstars.pandawm.com/`。
+
+要临时换域名或加路径前缀，可以改 `config.json`，也可以在仓库 Variables 里设置 `PAGES_DOMAIN`、`BASE_PATH`、`PAGES_URL`。环境变量优先于配置文件。只有重新发布到 `https://aichatsale.github.io/rising-stars-daily/` 时，才把 `site.basePath` 设为 `/rising-stars-daily`，并去掉自定义域名。
 
 ## 数据
 

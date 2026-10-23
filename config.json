@@ -65,5 +65,9 @@
     "subjectPrefix": "昇星日报",
     "topInEmail": 10
   },
+  "site": {
+    "domain": "githubstars.pandawm.com",
+    "basePath": ""
+  },
   "recommendCount": 3
 }

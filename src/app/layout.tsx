@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Fraunces, Geist } from "next/font/google";
+import { DEFAULT_PAGES_URL } from "@/lib/pages-host";
 import "./globals.css";
 
 const fraunces = Fraunces({
@@ -12,7 +13,10 @@ const geist = Geist({
   variable: "--font-geist-sans",
 });
 
+const pagesUrl = process.env.NEXT_PUBLIC_PAGES_URL || DEFAULT_PAGES_URL;
+
 export const metadata: Metadata = {
+  metadataBase: new URL(pagesUrl),
   title: "昇星日报",
   description: "每日对照 GitHub 星标快照，找出过去 24 小时增速最快的开源项目，供业务团队筛选可以带给客户的机会。",
 };

@@ -10,6 +10,12 @@ export type TopicConfig = {
   minStars?: number;
 };
 
+export type PagesHostConfig = {
+  domain: string;
+  basePath: string;
+  url: string;
+};
+
 export type AppConfig = {
   topN: number;
   minStars: number;
@@ -41,6 +47,7 @@ export type AppConfig = {
     subjectPrefix: string;
     topInEmail: number;
   };
+  site: PagesHostConfig;
   recommendCount: number;
 };
 
