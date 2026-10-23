@@ -123,6 +123,7 @@
   html {
     @apply font-sans;
     color-scheme: light;
+    overflow-anchor: none;
   }
   html.dark {
     color-scheme: dark;

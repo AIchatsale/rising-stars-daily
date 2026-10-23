@@ -30,25 +30,51 @@ export function LibraryGate() {
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
-    if (window.location.hash === "#library") {
-      setReady(true);
-      return;
-    }
     const node = section.current;
     if (!node) return;
-    const observer = new IntersectionObserver(
+    let frozen = false;
+    const wantsLibrary = () => window.location.hash === "#library";
+    const align = () => {
+      if (frozen || !wantsLibrary()) return;
+      const top = node.getBoundingClientRect().top;
+      if (top > 64 && top < 96) return;
+      node.scrollIntoView({ block: "start" });
+    };
+    if (wantsLibrary()) setReady(true);
+    align();
+    const resize = new ResizeObserver(align);
+    resize.observe(document.documentElement);
+    const reveal = new IntersectionObserver(
       (entries) => {
+        if (wantsLibrary()) return;
         const visible = entries.some((entry) => entry.isIntersecting);
-        // The rising section is still a short skeleton on the first callback, which
-        // would otherwise pull the 7MB catalog into the initial paint.
         if (!visible || document.documentElement.scrollHeight < window.innerHeight + 900) return;
         setReady(true);
-        observer.disconnect();
+        reveal.disconnect();
       },
       { rootMargin: "480px 0px" },
     );
-    observer.observe(node);
-    return () => observer.disconnect();
+    reveal.observe(node);
+    const freeze = () => {
+      frozen = true;
+    };
+    const onHash = () => {
+      frozen = false;
+      if (wantsLibrary()) setReady(true);
+      align();
+    };
+    window.addEventListener("wheel", freeze, { passive: true });
+    window.addEventListener("touchmove", freeze, { passive: true });
+    window.addEventListener("keydown", freeze);
+    window.addEventListener("hashchange", onHash);
+    return () => {
+      resize.disconnect();
+      reveal.disconnect();
+      window.removeEventListener("wheel", freeze);
+      window.removeEventListener("touchmove", freeze);
+      window.removeEventListener("keydown", freeze);
+      window.removeEventListener("hashchange", onHash);
+    };
   }, []);
 
   return (
