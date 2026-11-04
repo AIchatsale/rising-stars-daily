@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-11-03T07:44:32.533Z",
-  "latest": "2026-11-03",
+  "generatedAt": "2026-11-04T07:23:08.638Z",
+  "latest": "2026-11-04",
   "dates": [
     "2026-10-17",
     "2026-10-18",
@@ -19,7 +19,8 @@
     "2026-10-31",
     "2026-11-01",
     "2026-11-02",
-    "2026-11-03"
+    "2026-11-03",
+    "2026-11-04"
   ],
   "filters": {
     "languages": [
@@ -213,6 +214,15 @@
       "source": "live",
       "mode": "delta",
       "previousDate": "2026-11-02",
+      "llm": "skipped",
+      "email": "sent",
+      "itemCount": 25
+    },
+    {
+      "date": "2026-11-04",
+      "source": "live",
+      "mode": "delta",
+      "previousDate": "2026-11-03",
       "llm": "skipped",
       "email": "sent",
       "itemCount": 25
