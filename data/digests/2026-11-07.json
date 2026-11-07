@@ -1,0 +1,483 @@
+{
+  "date": "2026-11-07",
+  "source": "live",
+  "mode": "delta",
+  "phrase": "过去 24 小时",
+  "previousDate": "2026-11-06",
+  "recommended": [
+    {
+      "fullName": "morluto/rea",
+      "reason": "星标增量为 3182（0.7%）。涉及 ai、llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "ai / llm",
+        "MIT"
+      ],
+      "category": "插件",
+      "url": "https://github.com/morluto/rea",
+      "stars": 438732,
+      "delta": 3182,
+      "growthPercent": 0.7305705429916198
+    },
+    {
+      "fullName": "storytold/craft-anything",
+      "reason": "星标增量为 2691（16.8%）。若客户正在找可落地的工具，可以把 storytold/craft-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "Apache-2.0"
+      ],
+      "category": "工具",
+      "url": "https://github.com/storytold/craft-anything",
+      "stars": 18732,
+      "delta": 2691,
+      "growthPercent": 16.775762109594165
+    },
+    {
+      "fullName": "cloudflare/security-audit-skill",
+      "reason": "星标增量为 2204（3.5%）。涉及 llm。若客户正在找可落地的工具，可以把 cloudflare/security-audit-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "llm",
+        "MIT"
+      ],
+      "category": "工具",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "stars": 64446,
+      "delta": 2204,
+      "growthPercent": 3.5410173194948746
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "fullName": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 438732,
+      "delta": 3182,
+      "growthPercent": 0.7305705429916198,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-14T00:51:32Z",
+      "category": "插件",
+      "summary": "rea：Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "opportunity": "星标增量为 3182（0.7%）。涉及 ai、llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 2,
+      "fullName": "storytold/craft-anything",
+      "url": "https://github.com/storytold/craft-anything",
+      "description": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "topics": [],
+      "stars": 18732,
+      "delta": 2691,
+      "growthPercent": 16.775762109594165,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-10-31T14:50:00Z",
+      "category": "工具",
+      "summary": "craft-anything：Craft Anything: understand how any software works, and craft your own.",
+      "opportunity": "星标增量为 2691（16.8%）。若客户正在找可落地的工具，可以把 storytold/craft-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 3,
+      "fullName": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 64446,
+      "delta": 2204,
+      "growthPercent": 3.5410173194948746,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-06-18T14:08:44Z",
+      "category": "工具",
+      "summary": "security-audit-skill：A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "opportunity": "星标增量为 2204（3.5%）。涉及 llm。若客户正在找可落地的工具，可以把 cloudflare/security-audit-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 4,
+      "fullName": "milind-soni/OpenMausBot",
+      "url": "https://github.com/milind-soni/OpenMausBot",
+      "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 15838,
+      "delta": 1946,
+      "growthPercent": 14.008062194068529,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-08-11T18:58:55Z",
+      "category": "工具",
+      "summary": "OpenMausBot：Open-source Grok Bot alternative with a virtual machine that bots can use",
+      "opportunity": "星标增量为 1946（14.0%）。若客户正在找可落地的工具，可以把 milind-soni/OpenMausBot 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 5,
+      "fullName": "sherlock-project/sherlock",
+      "url": "https://github.com/sherlock-project/sherlock",
+      "description": "Hunt down social media accounts by username across social networks",
+      "language": "Python",
+      "topics": [],
+      "stars": 98864,
+      "delta": 1782,
+      "growthPercent": 1.8355616901176326,
+      "deltaSource": "snapshot",
+      "createdAt": "2018-12-24T14:30:48Z",
+      "category": "工具",
+      "summary": "sherlock：Hunt down social media accounts by username across social networks",
+      "opportunity": "星标增量为 1782（1.8%）。若客户正在找可落地的工具，可以把 sherlock-project/sherlock 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 6,
+      "fullName": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": null,
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 50145,
+      "delta": 1450,
+      "growthPercent": 2.977718451586405,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-02-08T23:46:22Z",
+      "category": "工具",
+      "summary": "pingdotgg/t3code 没有简介。当前归类为工具。",
+      "opportunity": "星标增量为 1450（3.0%）。若客户正在找可落地的工具，可以把 pingdotgg/t3code 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 7,
+      "fullName": "NVIDIA/auto-ontology",
+      "url": "https://github.com/NVIDIA/auto-ontology",
+      "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval, and more explainable AI for LLM and agent workflows.",
+      "language": "Python",
+      "topics": [
+        "llm"
+      ],
+      "stars": 9335,
+      "delta": 1398,
+      "growthPercent": 17.613707950107095,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-27T21:45:56Z",
+      "category": "框架",
+      "summary": "auto-ontology：Auto Ontology is a Python framework for building semantic, graph-based reasoning layers over data. It enables deterministic query generation, better context retrieval",
+      "opportunity": "星标增量为 1398（17.6%）。涉及 llm。若客户正在找可落地的框架，可以把 NVIDIA/auto-ontology 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 8,
+      "fullName": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "topics": [
+        "llm"
+      ],
+      "stars": 316942,
+      "delta": 1158,
+      "growthPercent": 0.3667063562435082,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-02-03T11:15:53Z",
+      "category": "工具",
+      "summary": "skills：Skills for Real Engineers. Straight from my .agents directory.",
+      "opportunity": "星标增量为 1158（0.4%）。涉及 llm。若客户正在找可落地的工具，可以把 mattpocock/skills 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 9,
+      "fullName": "JenkinWoo/sheeridVerify",
+      "url": "https://github.com/JenkinWoo/sheeridVerify",
+      "description": null,
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 1139,
+      "delta": 1139,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-06T09:28:09Z",
+      "category": "工具",
+      "summary": "JenkinWoo/sheeridVerify 没有简介。当前归类为工具。",
+      "opportunity": "星标增量为 1139。若客户正在找可落地的工具，可以把 JenkinWoo/sheeridVerify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 10,
+      "fullName": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "description": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "topics": [
+        "llm",
+        "saas"
+      ],
+      "stars": 117996,
+      "delta": 952,
+      "growthPercent": 0.8133693311916885,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-03-17T03:28:57Z",
+      "category": "应用",
+      "summary": "orca：Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "opportunity": "星标增量为 952（0.8%）。涉及 llm、saas。若客户正在找可落地的应用，可以把 stablyai/orca 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 11,
+      "fullName": "vercel-labs/agent-desktop",
+      "url": "https://github.com/vercel-labs/agent-desktop",
+      "description": "Computer use CLI for AI agents",
+      "language": "Rust",
+      "topics": [
+        "llm"
+      ],
+      "stars": 18298,
+      "delta": 916,
+      "growthPercent": 5.269819353354045,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-02-19T18:00:49Z",
+      "category": "工具",
+      "summary": "agent-desktop：Computer use CLI for AI agents",
+      "opportunity": "星标增量为 916（5.3%）。涉及 llm。若客户正在找可落地的工具，可以把 vercel-labs/agent-desktop 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 12,
+      "fullName": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "topics": [
+        "ai"
+      ],
+      "stars": 103113,
+      "delta": 899,
+      "growthPercent": 0.8795272663235956,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-09T21:40:26Z",
+      "category": "工具",
+      "summary": "VoiceStudio：VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 la",
+      "opportunity": "星标增量为 899（0.9%）。涉及 ai。若客户正在找可落地的工具，可以把 debpalash/VoiceStudio 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 13,
+      "fullName": "heydamir/unslop",
+      "url": "https://github.com/heydamir/unslop",
+      "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+      "language": "JavaScript",
+      "topics": [],
+      "stars": 10891,
+      "delta": 765,
+      "growthPercent": 7.554809401540588,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-10-29T15:41:21Z",
+      "category": "工具",
+      "summary": "unslop：A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+      "opportunity": "星标增量为 765（7.6%）。若客户正在找可落地的工具，可以把 heydamir/unslop 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 14,
+      "fullName": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 104972,
+      "delta": 758,
+      "growthPercent": 0.7273494923906577,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-11-16T01:52:04Z",
+      "category": "工具",
+      "summary": "impeccable：The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "opportunity": "星标增量为 758（0.7%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 pbakaus/impeccable 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 15,
+      "fullName": "Nutlope/hallmark",
+      "url": "https://github.com/Nutlope/hallmark",
+      "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "language": "CSS",
+      "topics": [],
+      "stars": 49771,
+      "delta": 745,
+      "growthPercent": 1.5196018439195529,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-27T20:47:10Z",
+      "category": "工具",
+      "summary": "hallmark：Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+      "opportunity": "星标增量为 745（1.5%）。若客户正在找可落地的工具，可以把 Nutlope/hallmark 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 16,
+      "fullName": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 298717,
+      "delta": 669,
+      "growthPercent": 0.2244604895855701,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-18T00:51:51Z",
+      "category": "研究",
+      "summary": "ECC：The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "opportunity": "星标增量为 669（0.2%）。涉及 llm。若客户正在找可落地的研究，可以把 affaan-m/ECC 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 17,
+      "fullName": "mmdoctor/google-pro-helper",
+      "url": "https://github.com/mmdoctor/google-pro-helper",
+      "description": null,
+      "language": "Python",
+      "topics": [],
+      "stars": 967,
+      "delta": 618,
+      "growthPercent": 177.07736389684814,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-11-05T04:52:28Z",
+      "category": "工具",
+      "summary": "mmdoctor/google-pro-helper 没有简介。当前归类为工具。",
+      "opportunity": "星标增量为 618（177.1%）。若客户正在找可落地的工具，可以把 mmdoctor/google-pro-helper 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 18,
+      "fullName": "deepseek-ai/dsh-superagent-prototype",
+      "url": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "description": "Towards a More Autonomous Agent System",
+      "language": "TypeScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 20422,
+      "delta": 595,
+      "growthPercent": 3.0009582892015936,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-10-31T09:32:46Z",
+      "category": "工具",
+      "summary": "dsh-superagent-prototype：Towards a More Autonomous Agent System",
+      "opportunity": "星标增量为 595（3.0%）。涉及 llm。若客户正在找可落地的工具，可以把 deepseek-ai/dsh-superagent-prototype 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 19,
+      "fullName": "D4Vinci/Scrapling",
+      "url": "https://github.com/D4Vinci/Scrapling",
+      "description": "🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow here for daily tips and tricks: https://x.com/Scrapling_dev",
+      "language": "Python",
+      "topics": [
+        "ai"
+      ],
+      "stars": 98959,
+      "delta": 588,
+      "growthPercent": 0.597737137977656,
+      "deltaSource": "snapshot",
+      "createdAt": "2024-10-13T20:29:53Z",
+      "category": "框架",
+      "summary": "Scrapling：🕷️ The BEST Web Scraping framework that handles everything from a single request to a full-scale crawl! Don't be shy, join here: https://discord.gg/EMgGbDceNQ and follow",
+      "opportunity": "星标增量为 588（0.6%）。涉及 ai。若客户正在找可落地的框架，可以把 D4Vinci/Scrapling 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 20,
+      "fullName": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 185975,
+      "delta": 554,
+      "growthPercent": 0.2987795341412246,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-06-12T00:52:37Z",
+      "category": "插件",
+      "summary": "ponytail：Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "opportunity": "星标增量为 554（0.3%）。涉及 llm。若客户正在找可落地的插件，可以把 DietrichGebert/ponytail 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 21,
+      "fullName": "Minireel/HGhub",
+      "url": "https://github.com/Minireel/HGhub",
+      "description": "YellowFruit third-party client",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 1839,
+      "delta": 541,
+      "growthPercent": 41.67950693374422,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-11-03T14:04:27Z",
+      "category": "应用",
+      "summary": "HGhub：YellowFruit third-party client",
+      "opportunity": "星标增量为 541（41.7%）。若客户正在找可落地的应用，可以把 Minireel/HGhub 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 22,
+      "fullName": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 313733,
+      "delta": 535,
+      "growthPercent": 0.17081845988799416,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-10-09T19:45:18Z",
+      "category": "框架",
+      "summary": "superpowers：An agentic skills framework & software development methodology that works.",
+      "opportunity": "星标增量为 535（0.2%）。涉及 ai、llm。若客户正在找可落地的框架，可以把 obra/superpowers 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 23,
+      "fullName": "Graphify-Labs/graphify",
+      "url": "https://github.com/Graphify-Labs/graphify",
+      "description": "Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local deterministic AST parsing, every edge explained, no vector store.",
+      "language": "Python",
+      "topics": [
+        "llm"
+      ],
+      "stars": 143653,
+      "delta": 510,
+      "growthPercent": 0.35628706957378287,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-03T15:49:07Z",
+      "category": "文档",
+      "summary": "graphify：Turn any codebase, with its docs, SQL schemas, configs, and PDFs, into a queryable knowledge graph. A /graphify skill for Claude Code, Cursor, Codex, and Gemini CLI: local",
+      "opportunity": "星标增量为 510（0.4%）。涉及 llm。若客户正在找可落地的文档，可以把 Graphify-Labs/graphify 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 24,
+      "fullName": "NotRexed/Hookshot",
+      "url": "https://github.com/NotRexed/Hookshot",
+      "description": "A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
+      "language": "C++",
+      "topics": [],
+      "stars": 495,
+      "delta": 495,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-05T12:18:58Z",
+      "category": "工具",
+      "summary": "Hookshot：A Native Recompilation Of The Legend Of Zelda: Ocarina Of Time Nintendo Switch 2 Remake",
+      "opportunity": "星标增量为 495。若客户正在找可落地的工具，可以把 NotRexed/Hookshot 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 25,
+      "fullName": "voyager-so/vork",
+      "url": "https://github.com/voyager-so/vork",
+      "description": "Headless 3D and VFX engine for agents. Research preview.",
+      "language": "Rust",
+      "topics": [
+        "llm"
+      ],
+      "stars": 490,
+      "delta": 490,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-05T22:37:07Z",
+      "category": "研究",
+      "summary": "vork：Headless 3D and VFX engine for agents. Research preview.",
+      "opportunity": "星标增量为 490。涉及 llm。若客户正在找可落地的研究，可以把 voyager-so/vork 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    }
+  ]
+}
