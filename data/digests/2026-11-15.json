@@ -1,0 +1,489 @@
+{
+  "date": "2026-11-15",
+  "source": "live",
+  "mode": "delta",
+  "phrase": "过去 24 小时",
+  "previousDate": "2026-11-14",
+  "recommended": [
+    {
+      "fullName": "morluto/rea",
+      "reason": "星标增量为 2227（0.5%）。涉及 ai、llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "ai / llm",
+        "MIT"
+      ],
+      "category": "插件",
+      "url": "https://github.com/morluto/rea",
+      "stars": 460455,
+      "delta": 2227,
+      "growthPercent": 0.48600260132510453
+    },
+    {
+      "fullName": "GoogleChrome/modern-web-guidance-src",
+      "reason": "星标增量为 1223（24.0%）。涉及 llm。若客户正在找可落地的工具，可以把 GoogleChrome/modern-web-guidance-src 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "增速陡",
+        "llm",
+        "Apache-2.0"
+      ],
+      "category": "工具",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "stars": 6328,
+      "delta": 1223,
+      "growthPercent": 23.95690499510284
+    },
+    {
+      "fullName": "storytold/craft-anything",
+      "reason": "星标增量为 1363（4.3%）。若客户正在找可落地的工具，可以把 storytold/craft-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "Apache-2.0"
+      ],
+      "category": "工具",
+      "url": "https://github.com/storytold/craft-anything",
+      "stars": 33080,
+      "delta": 1363,
+      "growthPercent": 4.297379953967904
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "fullName": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 460455,
+      "delta": 2227,
+      "growthPercent": 0.48600260132510453,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-14T00:51:32Z",
+      "category": "插件",
+      "summary": "rea：Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "opportunity": "星标增量为 2227（0.5%）。涉及 ai、llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 2,
+      "fullName": "storytold/craft-anything",
+      "url": "https://github.com/storytold/craft-anything",
+      "description": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "topics": [],
+      "stars": 33080,
+      "delta": 1363,
+      "growthPercent": 4.297379953967904,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-10-31T14:50:00Z",
+      "category": "工具",
+      "summary": "craft-anything：Craft Anything: understand how any software works, and craft your own.",
+      "opportunity": "星标增量为 1363（4.3%）。若客户正在找可落地的工具，可以把 storytold/craft-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 3,
+      "fullName": "GoogleChrome/modern-web-guidance-src",
+      "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
+      "description": "Keep your coding agent up to date with the latest web best practices",
+      "language": "TypeScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 6328,
+      "delta": 1223,
+      "growthPercent": 23.95690499510284,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-27T20:22:24Z",
+      "category": "工具",
+      "summary": "modern-web-guidance-src：Keep your coding agent up to date with the latest web best practices",
+      "opportunity": "星标增量为 1223（24.0%）。涉及 llm。若客户正在找可落地的工具，可以把 GoogleChrome/modern-web-guidance-src 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 4,
+      "fullName": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "language": "TypeScript",
+      "topics": [
+        "ai"
+      ],
+      "stars": 60841,
+      "delta": 1009,
+      "growthPercent": 1.6863885546196014,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-02-08T23:46:22Z",
+      "category": "工具",
+      "summary": "t3code：The best way to control Claude Code, Codex and more from any computer or phone",
+      "opportunity": "星标增量为 1009（1.7%）。涉及 ai。若客户正在找可落地的工具，可以把 pingdotgg/t3code 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 5,
+      "fullName": "backnotprop/plannotator",
+      "url": "https://github.com/backnotprop/plannotator",
+      "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
+      "language": "TypeScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 11381,
+      "delta": 807,
+      "growthPercent": 7.631927369018348,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-12-28T02:09:40Z",
+      "category": "工具",
+      "summary": "plannotator：The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click. ",
+      "opportunity": "星标增量为 807（7.6%）。涉及 llm。若客户正在找可落地的工具，可以把 backnotprop/plannotator 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 6,
+      "fullName": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 303356,
+      "delta": 790,
+      "growthPercent": 0.26110005750811394,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-18T00:51:51Z",
+      "category": "研究",
+      "summary": "ECC：The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "opportunity": "星标增量为 790（0.3%）。涉及 llm。若客户正在找可落地的研究，可以把 affaan-m/ECC 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 7,
+      "fullName": "ChromeDevTools/chrome-devtools-mcp",
+      "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+      "description": "Chrome DevTools for coding agents",
+      "language": "TypeScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 56482,
+      "delta": 782,
+      "growthPercent": 1.4039497307001796,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-09-11T10:39:55Z",
+      "category": "工具",
+      "summary": "chrome-devtools-mcp：Chrome DevTools for coding agents",
+      "opportunity": "星标增量为 782（1.4%）。涉及 llm。若客户正在找可落地的工具，可以把 ChromeDevTools/chrome-devtools-mcp 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 8,
+      "fullName": "meta/astryx",
+      "url": "https://github.com/meta/astryx",
+      "description": "An open source design system that's fully customizable and agent ready",
+      "language": "TypeScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 28326,
+      "delta": 773,
+      "growthPercent": 2.8055021231807786,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-09T16:20:32Z",
+      "category": "工具",
+      "summary": "astryx：An open source design system that's fully customizable and agent ready",
+      "opportunity": "星标增量为 773（2.8%）。涉及 llm。若客户正在找可落地的工具，可以把 meta/astryx 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 9,
+      "fullName": "deepseek-ai/chat-demo",
+      "url": "https://github.com/deepseek-ai/chat-demo",
+      "description": "Chat Demo",
+      "language": "TypeScript",
+      "topics": [],
+      "stars": 1913,
+      "delta": 739,
+      "growthPercent": 62.947189097103916,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-11-12T08:08:19Z",
+      "category": "示例",
+      "summary": "chat-demo：Chat Demo",
+      "opportunity": "星标增量为 739（62.9%）。若客户正在找可落地的示例，可以把 deepseek-ai/chat-demo 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 10,
+      "fullName": "alibaba/open-code-review",
+      "url": "https://github.com/alibaba/open-code-review",
+      "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
+      "language": "Go",
+      "topics": [
+        "llm"
+      ],
+      "stars": 51590,
+      "delta": 724,
+      "growthPercent": 1.4233476192348524,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-05-18T02:16:36Z",
+      "category": "工具",
+      "summary": "open-code-review：Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, ",
+      "opportunity": "星标增量为 724（1.4%）。涉及 llm。若客户正在找可落地的工具，可以把 alibaba/open-code-review 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 11,
+      "fullName": "Likely7/Veyra-NRVideo",
+      "url": "https://github.com/Likely7/Veyra-NRVideo",
+      "description": "Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card sources. Combine AI-powered Super Resolution, DLSS5 image enhancement, and Frame Generation to deliver a next-generation visual experience.",
+      "language": "C++",
+      "topics": [],
+      "stars": 2435,
+      "delta": 707,
+      "growthPercent": 40.914351851851855,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-09-09T10:58:42Z",
+      "category": "工具",
+      "summary": "Veyra-NRVideo：Bring PS5 GTA6 to 120FPS with DLSS 5. An advanced Windows video player and capture enhancement tool featuring real-time preview for videos, images, and capture card s",
+      "opportunity": "星标增量为 707（40.9%）。若客户正在找可落地的工具，可以把 Likely7/Veyra-NRVideo 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 12,
+      "fullName": "tradermonty/claude-trading-skills",
+      "url": "https://github.com/tradermonty/claude-trading-skills",
+      "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "language": "Python",
+      "topics": [],
+      "stars": 5021,
+      "delta": 707,
+      "growthPercent": 16.38850254983774,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-10-19T16:37:29Z",
+      "category": "工具",
+      "summary": "claude-trading-skills：Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
+      "opportunity": "星标增量为 707（16.4%）。若客户正在找可落地的工具，可以把 tradermonty/claude-trading-skills 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 13,
+      "fullName": "cloudflare/security-audit-skill",
+      "url": "https://github.com/cloudflare/security-audit-skill",
+      "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 72785,
+      "delta": 705,
+      "growthPercent": 0.9780799112097669,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-06-18T14:08:44Z",
+      "category": "工具",
+      "summary": "security-audit-skill：A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+      "opportunity": "星标增量为 705（1.0%）。涉及 llm。若客户正在找可落地的工具，可以把 cloudflare/security-audit-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 14,
+      "fullName": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "description": "Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "topics": [
+        "llm",
+        "saas"
+      ],
+      "stars": 125230,
+      "delta": 705,
+      "growthPercent": 0.5661513752258582,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-03-17T03:28:57Z",
+      "category": "应用",
+      "summary": "orca：Orca lets you run a fleet of coding agents (e.g. Claude Code, Codex) with your own subscription. Available on desktop, mobile and remote runtime.",
+      "opportunity": "星标增量为 705（0.6%）。涉及 llm、saas。若客户正在找可落地的应用，可以把 stablyai/orca 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 15,
+      "fullName": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "topics": [
+        "ai"
+      ],
+      "stars": 110855,
+      "delta": 696,
+      "growthPercent": 0.6318140142884376,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-09T21:40:26Z",
+      "category": "工具",
+      "summary": "VoiceStudio：VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 la",
+      "opportunity": "星标增量为 696（0.6%）。涉及 ai。若客户正在找可落地的工具，可以把 debpalash/VoiceStudio 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 16,
+      "fullName": "Topkiflare74/ai--manus2.0",
+      "url": "https://github.com/Topkiflare74/ai--manus2.0",
+      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+      "language": null,
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 678,
+      "delta": 678,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:15:24Z",
+      "category": "集成",
+      "summary": "ai--manus2.0：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+      "opportunity": "星标增量为 678。涉及 ai、llm。若客户正在找可落地的集成，可以把 Topkiflare74/ai--manus2.0 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 17,
+      "fullName": "WarriorRemember/IPTV_Player_2.0",
+      "url": "https://github.com/WarriorRemember/IPTV_Player_2.0",
+      "description": "🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [],
+      "stars": 673,
+      "delta": 673,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:25:25Z",
+      "category": "应用",
+      "summary": "IPTV_Player_2.0：🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "opportunity": "星标增量为 673。若客户正在找可落地的应用，可以把 WarriorRemember/IPTV_Player_2.0 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 18,
+      "fullName": "trackboatwrightplan/GitHub-Copilot-app",
+      "url": "https://github.com/trackboatwrightplan/GitHub-Copilot-app",
+      "description": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "language": null,
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 672,
+      "delta": 672,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:16:41Z",
+      "category": "文档",
+      "summary": "GitHub-Copilot-app：The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "opportunity": "星标增量为 672。涉及 ai、llm。若客户正在找可落地的文档，可以把 trackboatwrightplan/GitHub-Copilot-app 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 19,
+      "fullName": "TrapAccountant/GitHub-Copilot-app",
+      "url": "https://github.com/TrapAccountant/GitHub-Copilot-app",
+      "description": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "language": null,
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 670,
+      "delta": 670,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:16:47Z",
+      "category": "文档",
+      "summary": "GitHub-Copilot-app：The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "opportunity": "星标增量为 670。涉及 ai、llm。若客户正在找可落地的文档，可以把 TrapAccountant/GitHub-Copilot-app 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 20,
+      "fullName": "tornadonovicewhirl40/IPTV_Player_2.0",
+      "url": "https://github.com/tornadonovicewhirl40/IPTV_Player_2.0",
+      "description": "🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [],
+      "stars": 669,
+      "delta": 669,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:15:43Z",
+      "category": "应用",
+      "summary": "IPTV_Player_2.0：🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "opportunity": "星标增量为 669。若客户正在找可落地的应用，可以把 tornadonovicewhirl40/IPTV_Player_2.0 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 21,
+      "fullName": "TurquoiseDetective/IPTV_Player_2.0",
+      "url": "https://github.com/TurquoiseDetective/IPTV_Player_2.0",
+      "description": "🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [],
+      "stars": 669,
+      "delta": 669,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:25:17Z",
+      "category": "应用",
+      "summary": "IPTV_Player_2.0：🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "opportunity": "星标增量为 669。若客户正在找可落地的应用，可以把 TurquoiseDetective/IPTV_Player_2.0 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 22,
+      "fullName": "WattBeetleLearn/IPTV_Player_2.0",
+      "url": "https://github.com/WattBeetleLearn/IPTV_Player_2.0",
+      "description": "🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [],
+      "stars": 667,
+      "delta": 667,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:25:28Z",
+      "category": "应用",
+      "summary": "IPTV_Player_2.0：🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "opportunity": "星标增量为 667。若客户正在找可落地的应用，可以把 WattBeetleLearn/IPTV_Player_2.0 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 23,
+      "fullName": "topapothecarycanal/ai--manus2.0",
+      "url": "https://github.com/topapothecarycanal/ai--manus2.0",
+      "description": "AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+      "language": null,
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 666,
+      "delta": 666,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:15:24Z",
+      "category": "集成",
+      "summary": "ai--manus2.0：AI Manus is a general-purpose AI Agent system that supports running various tools and operations in a sandbox environment.",
+      "opportunity": "星标增量为 666。涉及 ai、llm。若客户正在找可落地的集成，可以把 topapothecarycanal/ai--manus2.0 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 24,
+      "fullName": "trackersnailgrip/GitHub-Copilot-app",
+      "url": "https://github.com/trackersnailgrip/GitHub-Copilot-app",
+      "description": "The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "language": null,
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 666,
+      "delta": 666,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:16:41Z",
+      "category": "文档",
+      "summary": "GitHub-Copilot-app：The GitHub Copilot app is an agent-native desktop experience for finding, running, steering, and landing software work across your GitHub repositories. ",
+      "opportunity": "星标增量为 666。涉及 ai、llm。若客户正在找可落地的文档，可以把 trackersnailgrip/GitHub-Copilot-app 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 25,
+      "fullName": "Trapbraneedle/IPTV_Player_2.0",
+      "url": "https://github.com/Trapbraneedle/IPTV_Player_2.0",
+      "description": "🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "language": "Rust",
+      "topics": [],
+      "stars": 666,
+      "delta": 666,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-14T19:25:19Z",
+      "category": "应用",
+      "summary": "IPTV_Player_2.0：🎬 A powerful, intuitive IPTV streaming app supporting M3U playlists, EPG, and community lists. Available for Windows, macOS, Linux, Android & TV Boxes. ",
+      "opportunity": "星标增量为 666。若客户正在找可落地的应用，可以把 Trapbraneedle/IPTV_Player_2.0 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    }
+  ]
+}
