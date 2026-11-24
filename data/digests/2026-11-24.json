@@ -1,0 +1,485 @@
+{
+  "date": "2026-11-24",
+  "source": "live",
+  "mode": "delta",
+  "phrase": "过去 24 小时",
+  "previousDate": "2026-11-23",
+  "recommended": [
+    {
+      "fullName": "Marvisak/VIctory",
+      "reason": "星标增量为 7550。若客户正在找可落地的工具，可以把 Marvisak/VIctory 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "新仓库",
+        "GPL-3.0"
+      ],
+      "category": "工具",
+      "url": "https://github.com/Marvisak/VIctory",
+      "stars": 7550,
+      "delta": 7550,
+      "growthPercent": null
+    },
+    {
+      "fullName": "pingdotgg/t3code",
+      "reason": "星标增量为 3287（4.5%）。涉及 ai。若客户正在找可落地的工具，可以把 pingdotgg/t3code 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "ai",
+        "MIT"
+      ],
+      "category": "工具",
+      "url": "https://github.com/pingdotgg/t3code",
+      "stars": 76265,
+      "delta": 3287,
+      "growthPercent": 4.504097125161008
+    },
+    {
+      "fullName": "elementalsouls/Claude-BugHunter",
+      "reason": "星标增量为 1979（10.7%）。若客户正在找可落地的工具，可以把 elementalsouls/Claude-BugHunter 放进候选，先核对协议、最近提交和维护者是否还在回应问题。",
+      "signals": [
+        "MIT"
+      ],
+      "category": "工具",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "stars": 20509,
+      "delta": 1979,
+      "growthPercent": 10.679978413383703
+    }
+  ],
+  "items": [
+    {
+      "rank": 1,
+      "fullName": "Marvisak/VIctory",
+      "url": "https://github.com/Marvisak/VIctory",
+      "description": "An attempt at running GTA VI on PC",
+      "language": "Rust",
+      "topics": [],
+      "stars": 7550,
+      "delta": 7550,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-23T21:47:25Z",
+      "category": "工具",
+      "summary": "VIctory：An attempt at running GTA VI on PC",
+      "opportunity": "星标增量为 7550。若客户正在找可落地的工具，可以把 Marvisak/VIctory 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 2,
+      "fullName": "pingdotgg/t3code",
+      "url": "https://github.com/pingdotgg/t3code",
+      "description": "The best way to control Claude Code, Codex and more from any computer or phone",
+      "language": "TypeScript",
+      "topics": [
+        "ai"
+      ],
+      "stars": 76265,
+      "delta": 3287,
+      "growthPercent": 4.504097125161008,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-02-08T23:46:22Z",
+      "category": "工具",
+      "summary": "t3code：The best way to control Claude Code, Codex and more from any computer or phone",
+      "opportunity": "星标增量为 3287（4.5%）。涉及 ai。若客户正在找可落地的工具，可以把 pingdotgg/t3code 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 3,
+      "fullName": "elementalsouls/Claude-BugHunter",
+      "url": "https://github.com/elementalsouls/Claude-BugHunter",
+      "description": "A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
+      "language": "Python",
+      "topics": [],
+      "stars": 20509,
+      "delta": 1979,
+      "growthPercent": 10.679978413383703,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-05-05T11:22:32Z",
+      "category": "工具",
+      "summary": "Claude-BugHunter：A Claude Code skill bundle for bug hunting and external red-team work - 84 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerab",
+      "opportunity": "星标增量为 1979（10.7%）。若客户正在找可落地的工具，可以把 elementalsouls/Claude-BugHunter 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 4,
+      "fullName": "morluto/rea",
+      "url": "https://github.com/morluto/rea",
+      "description": "Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 476285,
+      "delta": 1626,
+      "growthPercent": 0.3425617127242926,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-14T00:51:32Z",
+      "category": "插件",
+      "summary": "rea：Reverse engineer anything with agents, from app behavior down to native binaries.",
+      "opportunity": "星标增量为 1626（0.3%）。涉及 ai、llm。若客户正在找可落地的插件，可以把 morluto/rea 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 5,
+      "fullName": "stablyai/orca",
+      "url": "https://github.com/stablyai/orca",
+      "description": "Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "language": "TypeScript",
+      "topics": [
+        "saas"
+      ],
+      "stars": 135156,
+      "delta": 1568,
+      "growthPercent": 1.1737581219870048,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-03-17T03:28:57Z",
+      "category": "应用",
+      "summary": "orca：Orca lets you run a fleet of bots with your own subscription (e.g. Claude Code, Grok, Agy, Codex). Available on desktop, mobile and remote runtime.",
+      "opportunity": "星标增量为 1568（1.2%）。涉及 saas。若客户正在找可落地的应用，可以把 stablyai/orca 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 6,
+      "fullName": "XiaoYouChR/Ghost-Downloader-3",
+      "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "description": "The only downloader you need. 下载器的集大成者。",
+      "language": "Python",
+      "topics": [],
+      "stars": 16873,
+      "delta": 1177,
+      "growthPercent": 7.498725790010194,
+      "deltaSource": "snapshot",
+      "createdAt": "2023-08-16T04:23:44Z",
+      "category": "应用",
+      "summary": "Ghost-Downloader-3：The only downloader you need. 下载器的集大成者。",
+      "opportunity": "星标增量为 1177（7.5%）。若客户正在找可落地的应用，可以把 XiaoYouChR/Ghost-Downloader-3 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 7,
+      "fullName": "HKUDS/CLI-Anything",
+      "url": "https://github.com/HKUDS/CLI-Anything",
+      "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "language": "Python",
+      "topics": [
+        "llm"
+      ],
+      "stars": 64172,
+      "delta": 1099,
+      "growthPercent": 1.7424254435336832,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-03-08T13:52:57Z",
+      "category": "工具",
+      "summary": "CLI-Anything：\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
+      "opportunity": "星标增量为 1099（1.7%）。涉及 llm。若客户正在找可落地的工具，可以把 HKUDS/CLI-Anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 8,
+      "fullName": "zhouxiaoka/autoclip",
+      "url": "https://github.com/zhouxiaoka/autoclip",
+      "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "language": "Python",
+      "topics": [],
+      "stars": 14960,
+      "delta": 1065,
+      "growthPercent": 7.664627563871897,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-07-08T04:51:15Z",
+      "category": "应用",
+      "summary": "autoclip：AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
+      "opportunity": "星标增量为 1065（7.7%）。若客户正在找可落地的应用，可以把 zhouxiaoka/autoclip 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 9,
+      "fullName": "obra/superpowers",
+      "url": "https://github.com/obra/superpowers",
+      "description": "An agentic skills framework & software development methodology that works.",
+      "language": "Shell",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 325504,
+      "delta": 1035,
+      "growthPercent": 0.31898270713072746,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-10-09T19:45:18Z",
+      "category": "框架",
+      "summary": "superpowers：An agentic skills framework & software development methodology that works.",
+      "opportunity": "星标增量为 1035（0.3%）。涉及 ai、llm。若客户正在找可落地的框架，可以把 obra/superpowers 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 10,
+      "fullName": "mjmirza/app-store-compliance",
+      "url": "https://github.com/mjmirza/app-store-compliance",
+      "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest and Data safety checks, 112 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
+      "language": "Shell",
+      "topics": [
+        "llm"
+      ],
+      "stars": 5332,
+      "delta": 1033,
+      "growthPercent": 24.02884391719004,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-06-06T11:29:45Z",
+      "category": "应用",
+      "summary": "app-store-compliance：Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 124 documented rejection patterns and fixes, privacy manifest an",
+      "opportunity": "星标增量为 1033（24.0%）。涉及 llm。若客户正在找可落地的应用，可以把 mjmirza/app-store-compliance 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 11,
+      "fullName": "firecrawl/firecrawl",
+      "url": "https://github.com/firecrawl/firecrawl",
+      "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "language": "TypeScript",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 208349,
+      "delta": 1015,
+      "growthPercent": 0.4895482651181186,
+      "deltaSource": "snapshot",
+      "createdAt": "2024-04-15T21:02:29Z",
+      "category": "工具",
+      "summary": "firecrawl：Knowledge infrastructure to make your agents smarter. Search, scrape and access 550+ data providers through one API.",
+      "opportunity": "星标增量为 1015（0.5%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 firecrawl/firecrawl 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 12,
+      "fullName": "EL4CTEO/fast-anything",
+      "url": "https://github.com/EL4CTEO/fast-anything",
+      "description": "Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+      "language": "Rust",
+      "topics": [
+        "llm"
+      ],
+      "stars": 3401,
+      "delta": 988,
+      "growthPercent": 40.94488188976378,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-11-21T14:40:27Z",
+      "category": "插件",
+      "summary": "fast-anything：Don't rewrite it in Rust. Rewrite the 5% that's slow: profile Python, Node or Ruby apps, port the hot functions with your coding agent, prove they behave the same.",
+      "opportunity": "星标增量为 988（40.9%）。涉及 llm。若客户正在找可落地的插件，可以把 EL4CTEO/fast-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 13,
+      "fullName": "ubiquitarianism/leonida",
+      "url": "https://github.com/ubiquitarianism/leonida",
+      "description": "A continuation of Leonida, the Xbox > PC port of GTA VI",
+      "language": "Python",
+      "topics": [],
+      "stars": 952,
+      "delta": 952,
+      "growthPercent": null,
+      "deltaSource": "created-window",
+      "createdAt": "2026-11-23T23:54:39Z",
+      "category": "工具",
+      "summary": "leonida：A continuation of Leonida, the Xbox > PC port of GTA VI",
+      "opportunity": "星标增量为 952。若客户正在找可落地的工具，可以把 ubiquitarianism/leonida 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 14,
+      "fullName": "mattpocock/skills",
+      "url": "https://github.com/mattpocock/skills",
+      "description": "Skills for Real Engineers. Straight from my .agents directory.",
+      "language": "Shell",
+      "topics": [
+        "llm"
+      ],
+      "stars": 331767,
+      "delta": 925,
+      "growthPercent": 0.2795896530670229,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-02-03T11:15:53Z",
+      "category": "工具",
+      "summary": "skills：Skills for Real Engineers. Straight from my .agents directory.",
+      "opportunity": "星标增量为 925（0.3%）。涉及 llm。若客户正在找可落地的工具，可以把 mattpocock/skills 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 15,
+      "fullName": "os6/nospeaker",
+      "url": "https://github.com/os6/nospeaker",
+      "description": "make your macbook's trackpad talk using its haptic motor",
+      "language": "Swift",
+      "topics": [],
+      "stars": 1607,
+      "delta": 906,
+      "growthPercent": 129.24393723252496,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-11-22T12:05:54Z",
+      "category": "工具",
+      "summary": "nospeaker：make your macbook's trackpad talk using its haptic motor",
+      "opportunity": "星标增量为 906（129.2%）。若客户正在找可落地的工具，可以把 os6/nospeaker 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 16,
+      "fullName": "storytold/craft-anything",
+      "url": "https://github.com/storytold/craft-anything",
+      "description": "Craft Anything: understand how any software works, and craft your own.",
+      "language": "Rust",
+      "topics": [],
+      "stars": 42482,
+      "delta": 884,
+      "growthPercent": 2.1251021683734796,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-10-31T14:50:00Z",
+      "category": "工具",
+      "summary": "craft-anything：Craft Anything: understand how any software works, and craft your own.",
+      "opportunity": "星标增量为 884（2.1%）。若客户正在找可落地的工具，可以把 storytold/craft-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 17,
+      "fullName": "cathrynlavery/diagram-design",
+      "url": "https://github.com/cathrynlavery/diagram-design",
+      "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
+      "language": "HTML",
+      "topics": [],
+      "stars": 71383,
+      "delta": 830,
+      "growthPercent": 1.1764205632644962,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-16T18:01:16Z",
+      "category": "工具",
+      "summary": "diagram-design：Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 52 diagram types. Self-contained HTML + SVG. No shadows. No Me",
+      "opportunity": "星标增量为 830（1.2%）。若客户正在找可落地的工具，可以把 cathrynlavery/diagram-design 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 18,
+      "fullName": "jingyaogong/minimind",
+      "url": "https://github.com/jingyaogong/minimind",
+      "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 69865,
+      "delta": 794,
+      "growthPercent": 1.1495417758538315,
+      "deltaSource": "snapshot",
+      "createdAt": "2024-07-27T04:34:12Z",
+      "category": "工具",
+      "summary": "minimind：🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
+      "opportunity": "星标增量为 794（1.1%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 jingyaogong/minimind 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 19,
+      "fullName": "togg53192-cmd/jailbreaks",
+      "url": "https://github.com/togg53192-cmd/jailbreaks",
+      "description": "LIST OF ALL MY JAILBREAKS",
+      "language": null,
+      "topics": [],
+      "stars": 20324,
+      "delta": 790,
+      "growthPercent": 4.044230572335415,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-06-18T18:21:25Z",
+      "category": "工具",
+      "summary": "jailbreaks：LIST OF ALL MY JAILBREAKS",
+      "opportunity": "星标增量为 790（4.0%）。若客户正在找可落地的工具，可以把 togg53192-cmd/jailbreaks 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 20,
+      "fullName": "mvanhorn/last30days-skill",
+      "url": "https://github.com/mvanhorn/last30days-skill",
+      "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "language": "Python",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 73759,
+      "delta": 752,
+      "growthPercent": 1.030038215513581,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-23T20:37:37Z",
+      "category": "插件",
+      "summary": "last30days-skill：AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
+      "opportunity": "星标增量为 752（1.0%）。涉及 ai、llm。若客户正在找可落地的插件，可以把 mvanhorn/last30days-skill 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 21,
+      "fullName": "debpalash/VoiceStudio",
+      "url": "https://github.com/debpalash/VoiceStudio",
+      "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 languages.",
+      "language": "Python",
+      "topics": [
+        "ai"
+      ],
+      "stars": 117482,
+      "delta": 734,
+      "growthPercent": 0.6287045602494261,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-04-09T21:40:26Z",
+      "category": "工具",
+      "summary": "VoiceStudio：VoiceStudio is the open-source, fully-local ElevenLabs alternative — voice cloning, voice design, video dubbing, dictation, transcription & audiobook creation in 646 la",
+      "opportunity": "星标增量为 734（0.6%）。涉及 ai。若客户正在找可落地的工具，可以把 debpalash/VoiceStudio 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 22,
+      "fullName": "erkamyaman/rust-anything",
+      "url": "https://github.com/erkamyaman/rust-anything",
+      "description": "Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, Python, C, Go, Ruby and Java.",
+      "language": "Rust",
+      "topics": [],
+      "stars": 8983,
+      "delta": 727,
+      "growthPercent": 8.805717054263566,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-11-16T12:10:36Z",
+      "category": "应用",
+      "summary": "rust-anything：Rewrite your whole app in Rust, one piece at a time, checked against the original's recorded behavior at every step. CLIs, HTTP servers and libraries in TypeScript, P",
+      "opportunity": "星标增量为 727（8.8%）。若客户正在找可落地的应用，可以把 erkamyaman/rust-anything 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 23,
+      "fullName": "pbakaus/impeccable",
+      "url": "https://github.com/pbakaus/impeccable",
+      "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "language": "Rust",
+      "topics": [
+        "ai",
+        "llm"
+      ],
+      "stars": 115909,
+      "delta": 665,
+      "growthPercent": 0.577036548540488,
+      "deltaSource": "snapshot",
+      "createdAt": "2025-11-16T01:52:04Z",
+      "category": "工具",
+      "summary": "impeccable：The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
+      "opportunity": "星标增量为 665（0.6%）。涉及 ai、llm。若客户正在找可落地的工具，可以把 pbakaus/impeccable 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 24,
+      "fullName": "DietrichGebert/ponytail",
+      "url": "https://github.com/DietrichGebert/ponytail",
+      "description": "Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 197764,
+      "delta": 651,
+      "growthPercent": 0.33026741006427784,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-06-12T00:52:37Z",
+      "category": "插件",
+      "summary": "ponytail：Makes your AI agent think like the laziest senior dev in the room. The best code is the code you never wrote.",
+      "opportunity": "星标增量为 651（0.3%）。涉及 llm。若客户正在找可落地的插件，可以把 DietrichGebert/ponytail 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    },
+    {
+      "rank": 25,
+      "fullName": "affaan-m/ECC",
+      "url": "https://github.com/affaan-m/ECC",
+      "description": "The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "language": "JavaScript",
+      "topics": [
+        "llm"
+      ],
+      "stars": 309831,
+      "delta": 640,
+      "growthPercent": 0.20699179471588758,
+      "deltaSource": "snapshot",
+      "createdAt": "2026-01-18T00:51:51Z",
+      "category": "研究",
+      "summary": "ECC：The agent harness performance optimization system. Skills, instincts, memory, security, and research-first development for Claude Code, Codex, Opencode, Cursor and beyond.",
+      "opportunity": "星标增量为 640（0.2%）。涉及 llm。若客户正在找可落地的研究，可以把 affaan-m/ECC 放进候选，先核对协议、最近提交和维护者是否还在回应问题。"
+    }
+  ]
+}
